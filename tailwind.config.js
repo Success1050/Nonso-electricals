@@ -13,10 +13,14 @@ export default {
         cusBgCol2: "rgba(234, 88, 12, 0.3)",
         cusBgCol3: "rgba(32, 26, 26, 0.7)",
         cusBgCol4: "#101828",
+        cusBgCol5: "rgba(255, 255, 255, .3)",
       },
 
       colors: {
         cusBtnColor: "rgb(234, 88, 12, 0.8)",
+        cuscolor: "#475467",
+        cusCol2: "rgba(234, 88, 12, 1)",
+        cusBgCol6: "#101828",
       },
 
       backdropBlur: {
@@ -36,6 +40,7 @@ export default {
       borderColor: {
         cusBcolor: "rgba(234, 88, 12, 0.7)",
         cusBcolor2: "rgba(71, 84, 103, .4)",
+        cusBcolor3: "rgba(71, 84, 103, .3)",
       },
 
       spacing: {
@@ -55,11 +60,14 @@ export default {
         cusmx: "0.98rem",
         cuslineheight: "1.1em",
         cusp1: "30px",
-        cusmb: "30px",
+        cuspl2: "20px",
         custop3: "28%",
         custop4: "45%",
         custop5: "20%",
-        cusmb2: "30px",
+        cuspd4: "30px 30px 20px",
+        cuspd5: "6px 10px",
+        cusgap3: "15px",
+        cuspd6: "10px",
       },
 
       lineHeight: {
@@ -85,6 +93,8 @@ export default {
         cusWidth9: "100vw",
         cusWidth10: "45px",
         cusWidth11: "50vw",
+        cusWidth12: "370px",
+        cusWidth13: "42px",
       },
 
       maxWidth: {
@@ -99,6 +109,8 @@ export default {
         cusHeight4: "36px",
         cusHeight5: "45px",
         cusHeight6: "40vh",
+        cusheight7: "42px",
+        cusheight8: "2px",
       },
 
       zIndex: {
@@ -131,6 +143,8 @@ export default {
         cusFontSize8: "18px",
         cusFontSize9: "20px",
         cusFontSize10: "34px",
+        cusFontSize11: "56px",
+        cusFontSize12: "30px",
       },
       fontFamily: {
         cusFontFamily: " 'Kaushan Script', cursive",
@@ -140,11 +154,17 @@ export default {
       flexBasis: {
         cusBasis: "47%",
         cusBasis2: "45%",
+        cusBasis3: "35%",
+        cusBasis4: "60%",
       },
 
       translate: {
         custranslateX: "-50%",
         custranslateY: "-50%",
+      },
+
+      gridTemplateColumns: {
+        cusgridcul: "60% 25%",
       },
 
       animation: {
