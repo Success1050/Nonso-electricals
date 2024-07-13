@@ -32,9 +32,10 @@ const NavBar = () => {
 
           {/* DESKTOP SCREEN SIZE */}
           <div className='hidden text-white cusLg:flex items-center gap-7 lg:gap-10 xl:gap-20 custom:gap-10 cusLg:justify-center'>
-            <Link to='/' className='btn'>
+            <Link to='/' className='btn '>
               Home
             </Link>
+
             <Link to='/about' className='btn'>
               About
             </Link>

@@ -57,14 +57,14 @@ export const reviews = [
     id: 1,
     name: "success emma",
     description:
-      "I highly recommend Security for their exceptional securityservices. Their team installed a comprehensive video surveillance system in our commercial property, and we have been impressed with the quality of the cameras and the ease of monitoring through their user-friendly mobile app. John Dain Manager starStarStarStarStar I am extremely satisfied with the alarm system installation and monitoring services provided by Security. Their prompt response and efficient monitoring have proven invaluable in ensuring the safety of our home. Their knowledgeable staff took the time to understand our specific needs.",
+      "I highly recommend Security for their exceptional security services. Their team installed a comprehensive video surveillance system in our commercial property, and we have been impressed with the quality of the cameras and the ease of monitoring through their user-friendly mobile app. John Dain Manager starStarStarStarStar I am extremely satisfied with the alarm system installation and monitoring services provided by Security. Their prompt response and efficient monitoring have proven invaluable in ensuring the safety of our home. Their knowledgeable staff took the time to understand our specific needs.",
     position: "IT Assistance",
   },
   {
     id: 2,
     name: "Darling John",
     description:
-      "I highly recommend Security for their exceptional securityservices. Their team installed a comprehensive video surveillance system in our commercial property, and we have been impressed with the quality of the cameras and the ease of monitoring through their user-friendly mobile app. John Dain Manager starStarStarStarStar I am extremely satisfied with the alarm system installation and monitoring services provided by Security. Their prompt response and efficient monitoring have proven invaluable in ensuring the safety of our home. Their knowledgeable staff took the time to understand our specific needs.",
+      "I highly recommend Security for their exceptional security services. Their team installed a comprehensive video surveillance system in our commercial property, and we have been impressed with the quality of the cameras and the ease of monitoring through their user-friendly mobile app. John Dain Manager starStarStarStarStar I am extremely satisfied with the alarm system installation and monitoring services provided by Security. Their prompt response and efficient monitoring have proven invaluable in ensuring the safety of our home. Their knowledgeable staff took the time to understand our specific needs.",
     position: "Sales Boy",
   },
 
@@ -79,7 +79,7 @@ export const reviews = [
     id: 4,
     name: "Cooper Laane",
     description:
-      "I highly recommend Security for their exceptional securityservices. Their team installed a comprehensive video surveillance system in our commercial property, and we have been impressed with the quality of the cameras and the ease of monitoring through their user-friendly mobile app. John Dain Manager starStarStarStarStar I am extremely satisfied with the alarm system installation and monitoring services provided by Security. Their prompt response and efficient monitoring have proven invaluable in ensuring the safety of our home. Their knowledgeable staff took the time to understand our specific needs.",
+      "I highly recommend Security for their exceptional security services. Their team installed a comprehensive video surveillance system in our commercial property, and we have been impressed with the quality of the cameras and the ease of monitoring through their user-friendly mobile app. John Dain Manager starStarStarStarStar I am extremely satisfied with the alarm system installation and monitoring services provided by Security. Their prompt response and efficient monitoring have proven invaluable in ensuring the safety of our home. Their knowledgeable staff took the time to understand our specific needs.",
     position: "Supervisor",
   },
 
@@ -87,7 +87,7 @@ export const reviews = [
     id: 5,
     name: "Peter Paul",
     description:
-      "I highly recommend Security for their exceptional securityservices. Their team installed a comprehensive video surveillance system in our commercial property, and we have been impressed with the quality of the cameras and the ease of monitoring through their user-friendly mobile app. John Dain Manager starStarStarStarStar I am extremely satisfied with the alarm system installation and monitoring services provided by Security. Their prompt response and efficient monitoring have proven invaluable in ensuring the safety of our home. Their knowledgeable staff took the time to understand our specific needs.",
+      "I highly recommend Security for their exceptional security services. Their team installed a comprehensive video surveillance system in our commercial property, and we have been impressed with the quality of the cameras and the ease of monitoring through their user-friendly mobile app. John Dain Manager starStarStarStarStar I am extremely satisfied with the alarm system installation and monitoring services provided by Security. Their prompt response and efficient monitoring have proven invaluable in ensuring the safety of our home. Their knowledgeable staff took the time to understand our specific needs.",
     position: "Clerk",
   },
 ];

@@ -6,6 +6,8 @@ import Shop from "./pages/ShopComponent.jsx";
 import Contact from "./pages/ContactComponent.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 import Cart from "./pages/Cart.jsx";
+import Footer from "./PageLayout/Footer.jsx";
+import HeaderComponent from "./PageLayout/HeaderComponent.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SharedLayout from "./PageLayout/SharedLayout.jsx";
 const App = () => {
@@ -13,6 +15,8 @@ const App = () => {
     <>
       <div>
         <Router>
+          <HeaderComponent />
+
           <Routes>
             <Route path='/' element={<SharedLayout />}>
               <Route index element={<Home />} />
@@ -25,6 +29,9 @@ const App = () => {
               <Route path='*' element={<NotFoundPage />} />
             </Route>
           </Routes>
+          <section className='bg-white p-8 py-14'>
+            <Footer />
+          </section>
         </Router>
       </div>
     </>

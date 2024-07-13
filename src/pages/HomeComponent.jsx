@@ -1,28 +1,12 @@
 import Reveal from "../Reveal";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
+import HeaderComponent from "../PageLayout/HeaderComponent";
 
 import { reviews } from "../elecItems";
 import { Link } from "react-router-dom";
-import {
-  FaArrowRight,
-  FaArrowUp,
-  FaArrowDown,
-  FaLightbulb,
-  FaStarHalf,
-  FaStar,
-} from "react-icons/fa";
-import { useState } from "react";
-import { questions } from "../elecItems";
-
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-};
+import { FaArrowRight, FaLightbulb, FaStarHalf, FaStar } from "react-icons/fa";
+// import { useState } from "react";
+// import { questions } from "../elecItems";
 
 import {
   icon,
@@ -36,6 +20,13 @@ import {
 } from "../images/imports";
 import Progressbar from "../PageLayout/progressbar/Progressbar";
 import Footer from "../PageLayout/Footer";
+import Companies from "./Companies";
+import AdvertPageComponent from "./AdvertPageComponent";
+import FaqSection from "../PageLayout/FaqSection";
+import QuestionSection from "./QuestionSection";
+import RatingSection from "../PageLayout/RatingSection";
+import Testimonials from "./Testimonials";
+import PricingSection from "./PricingSection";
 
 const HomeComponent = () => {
   const leftVariants = {
@@ -58,26 +49,20 @@ const HomeComponent = () => {
     visible: { opacity: 1, y: 0 },
   };
 
-  const [dropdownState, isdropdownState] = useState(null);
-
-  console.log(dropdownState);
-  const questionToggle = (id) => {
-    isdropdownState(id !== dropdownState ? id : null);
-  };
+  // const { dropdownState, isdropdownState, questionTag } = useQuestionTag();
 
   return (
     <>
-      <header className='bg-black'>
-        <div className='flex justify-center flex-col text-center lg:text-start lg:items-start items-center text-white h-full cussm:mx-5 lg:ml-11 gap-8'>
+      <header className="bg-[url('./src/images/banner.png')]">
+        <HeaderComponent>
           <Reveal variants={bottomVariants}>
             <div>
-              <h5 className='cussm:text-cusFontSize3 font-bold mb-10 cusLg:text-xl'>
+              <h5 className='cussm:text-cusFontSize3 font-bold mb-10 cusLg:text-xl cussm:mt-8 cussmall:mt-4'>
                 ELECTRICAL/SOLAR INSTALLATIONS
               </h5>
 
-              <p className='heading cussm:leading-cuslineheight  text-4xl'>
-                Lighten Up Your Homes With Our
-                <div>Electrical And Solar Installation</div>
+              <p className='heading cussm:leading-0 cussm:text-cusFontSiz6 cusLg:cussm:leading-0   text-4xl cusLg:cussm:text-4xl'>
+                Lighten Up Your Homes With Our Electrical And Solar Installation
               </p>
 
               <p className='header-text mt-8 cussm:mt-5 lg:mt-8 cussm:text-cusFontSize4 md:text-xl font-bold'>
@@ -92,19 +77,19 @@ const HomeComponent = () => {
             </div>
           </Reveal>
 
-          <div className='banner-link cussm:mt-8 cussmall:mt-0 flex gap-3 cussm:flex-col sm:flex-row cussm:gap-2 sm:gap-3'>
-            <button className='border-2 rounded-lg text-center bg-orange-600 cursor-pointer btn2 mt-4 w-36 h-16 block cussm:self-start z-20'>
+          <div className='banner-link cussm:mt-0 cussmall:mt-0 flex gap-3 cussm:flex-row sm:flex-row cussm:gap-2 sm:gap-3 cussm:mb-4 sm:mb-0'>
+            <button className='border-2 rounded-lg text-center bg-orange-600 cursor-pointer btn2 cussm:mt-0 sm:mt-4 mt-4 w-36 h-16 cussm:h-10 block cussm:self-start z-20 sm:h-16'>
               <Link to='/about' className='banner-text-link1'>
                 About Us
               </Link>
             </button>
-            <button className='border-2 rounded-lg text-center cursor-pointer btn2 mt-4 w-36 h-16 block cussm:self-start z-20 contact-btn'>
+            <button className='border-2 rounded-lg text-center cursor-pointer btn2 mt-4 w-36 h-16 block cussm:h-10 cussm:self-start z-20 contact-btn cussm:mt-0 sm:mt-4 sm:h-16'>
               <Link to='/about' className='banner-text-link1'>
                 Contact Us
               </Link>
             </button>
           </div>
-        </div>
+        </HeaderComponent>
       </header>
 
       <section className='bg-white p-14 services'>
@@ -264,44 +249,9 @@ const HomeComponent = () => {
               </Link>
             </button>
           </div>
+
           <div className='advert cussm:grid-cols-1 grid sm:grid-cols-2 cusLg:grid-cols-3 justify-center cussm:text-center cusLg:text-left cusLg:gap-4 cussm:gap-12 p-8'>
-            <div className='advert3'>
-              <h1 className='text-4xl cussm:text-cusfontsize5 cussmall:text-4xl text-orange-600 mb-3'>
-                400+
-              </h1>
-              <p className='text-3xl cussm:text-cusFontSiz6 cussmall:text-3xl font-bold mb-3'>
-                Satisfied Clients
-              </p>
-              <p className='text-gray-600'>
-                We take great pride in the relationships we have built.
-              </p>
-            </div>
-
-            <div className='advert3'>
-              <h1 className='text-4xl cussm:text-cusfontsize5 cussmall:text-4xl text-orange-600 mb-3'>
-                100+
-              </h1>
-              <p className='text-3xl cussm:text-cusFontSiz6 cussmall:text-3xl font-bold mb-3'>
-                Lightned and Safe
-              </p>
-              <p className='text-gray-600'>
-                We are committed to ensuring the protection of your homes by
-                using faultless electrical materials.
-              </p>
-            </div>
-
-            <div className='advert3'>
-              <h1 className='text-4xl cussm:text-cusfontsize5 cussmall:text-4xl text-orange-600 mb-3'>
-                12+
-              </h1>
-              <p className='text-3xl cussm:text-cusFontSiz6 cussmall:text-3xl font-bold mb-3'>
-                Satisfied Clients
-              </p>
-              <p className='text-gray-600'>
-                You can trust our extensive years of experience in the
-                electrical industry.
-              </p>
-            </div>
+            <AdvertPageComponent />
           </div>
         </Reveal>
       </section>
@@ -382,7 +332,8 @@ const HomeComponent = () => {
           <div className='flex cussm:items-center cussm:justify-center cusLg:item-start cusLg:justify-normal'>
             <img src={icon} alt='w-full cussm:m-auto' />
           </div>
-          <div className='flex justify-between items-start cussm:flex-col cusLg:flex-row cussm:items-center cusLg:items-start cussm:gap-6 cusLg:gap-0'>
+
+          <QuestionSection>
             <div className='basis-cusBasis flex flex-col gap-3'>
               <h2 className='w-full text-cusFontSiz7 cussm:text-cusFontSize10 cusLg:text-cusFontSiz7 font-cusFontFamily2 cussm:text-center cusLg:text-left font-bold uppercase leading-cuslineheight'>
                 Feel Confident Knowing That We Properly lighten Up Your Homes
@@ -401,139 +352,28 @@ const HomeComponent = () => {
 
             {/* FAQ */}
             <div className='basis-cusBasis'>
-              {questions.map((state) => {
-                const { id, question, answer } = state;
-                return (
-                  <div
-                    className='flex flex-col gap-3 scussm:w-cuswidth9 cusLg:w-auto'
-                    key={id}
-                  >
-                    <div className='question1 flex items-center justify-between w-full p-cusp1 shadow-customShadow bg-white rounded-cusBradius2'>
-                      <h5
-                        className={`question1 w-cusWidth7 text-cusFontSiz9 font-cusFontFamily2 font-bold ${
-                          id === dropdownState ? "text-cusBtnColor" : ""
-                        }`}
-                      >
-                        {question}
-                      </h5>
-                      <div className='arrow w-cusWidth8 h-cusHeight4 rounded-cusBradius border-cusBwidth border-cusBcolor2 border-solid flex self-center justify-center'>
-                        <button
-                          type='button'
-                          className={`${
-                            id === dropdownState ? "text-cusBtnColor" : ""
-                          }`}
-                          onClick={() => questionToggle(id)}
-                        >
-                          {id === dropdownState ? (
-                            <FaArrowUp></FaArrowUp>
-                          ) : (
-                            <FaArrowDown></FaArrowDown>
-                          )}
-                        </button>
-                      </div>
-                    </div>
-                    <div className='my-3'>
-                      <p
-                        className={`text-gray-500 text-cusFontSize8 font-cusFontFamily2 max-h-0 leading-7 ${
-                          id === dropdownState ? "selected" : "max-h-0"
-                        }`}
-                      >
-                        {id === dropdownState ? answer : null}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
+              <FaqSection />
+
               <button className='border-2 rounded-lg text-center bg-orange-600 cursor-pointer btn2 w-fit px-3 h-16 z-20 text-cusFontSize1 block cussm:m-auto cusLg:m-0'>
                 <Link to='/about' className='banner-text-link1'>
                   How Do We Work
                 </Link>
               </button>
             </div>
-          </div>
+          </QuestionSection>
         </Reveal>
       </section>
 
+      {/* COMPANIES SECTION */}
       <section className='bg-cusBgCol p-8'>
         <Reveal variants={bottomVariants}>
-          <h2 className='text-cusFontSiz7 cussm:text-3xl text-center text-white font-bold my-4'>
-            Our Electrical System Is Trusted By Some Of The Largest Companies
-          </h2>
-          <div className='grid justify-items-center items-center grid-cols-3 gap-3 lg:pt-11 cussm:grid-cols-2 sm:grid-cols-3 '>
-            <div className='bg-white py-3 w-32 text-center rounded-cusBradius2 shadow-customShadow flex font-bold text-slate-700 justify-center items-center gap-2'>
-              <FaLightbulb></FaLightbulb>
-              <h2 className='textname text-center text-xl'>Brail</h2>
-            </div>
-
-            <div className='bg-white py-3 text-center rounded-cusBradius2 shadow-customShadow flex font-bold text-slate-700 justify-center w-32 items-center gap-2'>
-              <FaLightbulb></FaLightbulb>
-              <h2 className='textname text-center text-2xl'>Brail</h2>
-            </div>
-
-            <div className='bg-white py-3 w-32 text-center rounded-cusBradius2 shadow-customShadow flex font-bold text-slate-700 justify-center items-center gap-2'>
-              <FaLightbulb></FaLightbulb>
-              <h2 className='textname text-center text-2xl'>Brail</h2>
-            </div>
-
-            <div className='bg-white py-3 w-32 text-center rounded-cusBradius2 shadow-customShadow flex font-bold text-slate-700 justify-center items-center gap-2'>
-              <FaLightbulb></FaLightbulb>
-              <h2 className='textname text-center text-2xl'>Brail</h2>
-            </div>
-
-            <div className='bg-white py-3 w-32 text-center rounded-cusBradius2 shadow-customShadow flex font-bold text-slate-700 justify-center items-center gap-2'>
-              <FaLightbulb></FaLightbulb>
-              <h2 className='textname text-center text-2xl'>Brail</h2>
-            </div>
-
-            <div className='bg-white py-3 w-32 text-center rounded-cusBradius2 shadow-customShadow flex font-bold text-slate-700 justify-center items-center gap-2 col-span-1'>
-              <FaLightbulb></FaLightbulb>
-              <h2 className='textname text-center text-2xl'>Brail</h2>
-            </div>
-          </div>
-          <div className='flex justify-center items-start  text-white mt-5 gap-40 cussm:gap-4 cussm:flex-col cusLg:flex-row cussm:justify-center lg:pt-11'>
-            <div className='basis-cusBasis2 cussm:mx-auto'>
-              <h2 className='text-cusFontSiz7 whitespace-nowrap cussm:text-center cussm:text-cusFontSize10 sm:text-cusFontSiz7 cusLg:text-left'>
-                What Our Clients <br /> Say About Us
-              </h2>
-            </div>
-
-            <div className='w-cusWidth11 cussm:w-full cusLg:w-cusWidth11 cussm:mt-0'>
-              <Slider {...settings}>
-                {reviews.map((review) => {
-                  const { id, name, description, position } = review;
-                  return (
-                    <div key={id} className='w-full '>
-                      <p className='font-semibold text-center cussm:text-left cusLg:text-center leading-8'>
-                        {description}
-                      </p>
-
-                      <div className='flex justify-between items-start mt-6'>
-                        <div>
-                          <h3 className='text-cusFontSize9 font-semibold'>
-                            {name}
-                          </h3>
-                          <h3 className='text-gray-500 text-cusFontSize8 font-cusFontFamily2 font-semibold'>
-                            {position}
-                          </h3>
-                        </div>
-
-                        <div className='flex justify-end items-start gap-3 cussm:gap-1 lg:gap-3 text-cusFontSize4 text-yellow-500'>
-                          {Array.from({ length: 5 }, (_, index) => (
-                            <FaStar key={index}></FaStar>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </Slider>
-            </div>
-          </div>
+          <Companies />
+          <Testimonials />
         </Reveal>
       </section>
 
       <section className='bg-white p-8'>
-        <div className='flex justify-between items-start mt-10 cussm:flex-col cusLg:flex-row'>
+        <RatingSection>
           <Reveal className='cussm:w-full cusLg:w-1/2' variants={leftVariants}>
             <div className='basis-cusBasis2'>
               <img src={team} alt='electrician' className='max-w-full' />
@@ -559,83 +399,13 @@ const HomeComponent = () => {
               <Progressbar />
             </div>
           </Reveal>
-        </div>
+        </RatingSection>
       </section>
 
       <section className='bg-gray-100 p-8'>
         <Reveal variants={topVariants}>
-          <div className='flex justify-between items-start cussm:flex-col cusLg:flex-row cussm:gap-y-4 cusLg:gap-0 cussm:items-center cusLg:items-start'>
-            <div className='basis-cusBasis3'>
-              <div className='max-w-full cussm:text-center cusLg:text-left'>
-                <h2 className='text-cusFontSize10 '>Pricing</h2>
-                <p className='text-cuscolor text-cusFontSize8'>
-                  We provide electrical requirements of residential, commercial
-                  and other clients
-                </p>
-                <button className='banner-text-link2 border-2 rounded-lg bg-orange-600 cursor-pointer btn2 mt-6 w-36 h-16 '>
-                  <Link to='/about' className='banner-text-link1'>
-                    Get Now
-                  </Link>
-                </button>
-              </div>
-            </div>
-
-            <div className='basis flex justify-between items-start gap-4 cussm:flex-col cusLg:flex-row '>
-              <div className='bg-cusBgCol4 p-cuspd4 text-white rounded-cusBradius2 relative'>
-                <h2>Most popular plan</h2>
-                <div className='w-fit bg-slate-400 p-cuspd5 rounded-cusBradius2 absolute top-4 right-2'>
-                  <h4>-20% off</h4>
-                </div>
-                <h1 className='text-cusFontSize11 my-3'>
-                  $90% <sub className='text-xl'>/MTH</sub>
-                </h1>
-                <hr />
-                <div className='my-cusmb2'>
-                  <ul className='flex flex-col gap-y-cusgap3 my-cusp1 list-disc pl-cuspl2'>
-                    <li>Security Guard Services</li>
-                    <li>24/7 support</li>
-                    <li>HD Camera monitoring</li>
-                    <li>Access to all features</li>
-                    <li>Analysis and benefits</li>
-                    <li>Global Overview & Statistics</li>
-                  </ul>
-                </div>
-                <button className='border-2 rounded-lg text-center bg-orange-600 cursor-pointer btn2 sm:mt-4 w-32 h-16 z-20 cussm:w-full sm:w-32 text-cusFontSize1 cussm:mt-0 cussm:mb-3 sm:mb-2'>
-                  <Link to='/about' className='banner-text-link1'>
-                    View All
-                  </Link>
-                </button>
-              </div>
-
-              <div className='p-cuspd4 text-cuscolor rounded-cusBradius2 shadow-customShadow'>
-                <h2>Standard Plan</h2>
-                <h1 className='text-cusFontSize11 my-3 text-cusBtnColor'>
-                  $90% <sub className='text-xl'>/MTH</sub>
-                </h1>
-                <hr />
-                <div className='my-cusmb2'>
-                  <ul className='flex flex-col gap-y-cusgap3 my-cusp1 list-disc pl-cuspl2'>
-                    <li>Security Guard Services</li>
-                    <li>24/7 support</li>
-                    <li>HD Camera monitoring</li>
-                    <li>Access to all features</li>
-                    <li>Analysis and benefits</li>
-                    <li>Global Overview & Statistics</li>
-                  </ul>
-                </div>
-                <button className='border-2 rounded-lg text-center bg-orange-600 cursor-pointer btn2 sm:mt-4 w-32 h-16 z-20 cussm:w-full sm:w-32 text-cusFontSize1 cussm:mt-0 cussm:mb-3 sm:mb-2'>
-                  <Link to='/about' className='banner-text-link1'>
-                    Get Now
-                  </Link>
-                </button>
-              </div>
-            </div>
-          </div>
+          <PricingSection />
         </Reveal>
-      </section>
-
-      <section className='bg-white p-8 py-14'>
-        <Footer />
       </section>
     </>
   );

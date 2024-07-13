@@ -111,6 +111,7 @@ export default {
         cusHeight6: "40vh",
         cusheight7: "42px",
         cusheight8: "2px",
+        cusheight9: "500px",
       },
 
       zIndex: {
@@ -123,7 +124,13 @@ export default {
         cussm: "300px",
         cussmall: "450px",
         cusmd: "840px",
+        cusmd2: "818px",
+        cuslg2: "750px",
+        cuslg3: "1221px",
+        cuslg4: "1198px",
+        cuslg5: "1000px",
       },
+
       transitionProperty: {
         custom: "all",
       },
@@ -145,6 +152,7 @@ export default {
         cusFontSize10: "34px",
         cusFontSize11: "56px",
         cusFontSize12: "30px",
+        cusFontSize13: "4rem",
       },
       fontFamily: {
         cusFontFamily: " 'Kaushan Script', cursive",
@@ -156,6 +164,12 @@ export default {
         cusBasis2: "45%",
         cusBasis3: "35%",
         cusBasis4: "60%",
+        cusBasis5: "32%",
+        cusBasis6: "32%",
+        cusBasis7: "33%",
+        cusBasis8: "48%",
+        cusBasis9: "40%",
+        cusBasis10: "50%",
       },
 
       translate: {
@@ -165,6 +179,8 @@ export default {
 
       gridTemplateColumns: {
         cusgridcul: "60% 25%",
+        cusgridcul2: "1/ -1",
+        cusgridcul3: "1px",
       },
 
       animation: {

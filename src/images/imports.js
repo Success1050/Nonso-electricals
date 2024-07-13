@@ -14,8 +14,22 @@ import led from "./led.jpg";
 import mapbanner from "./mapbanner.jpg";
 import mapbanner2 from "./mapbanner2.png";
 import team from "./team.jpg";
+import skyscrapper from "./skyscrapper.jpg";
+import bulb from "./bulb.jpg";
+import bulb2 from "./bulb2.jpg";
+import circuitbreaker from "./circuitbreaker.jpg";
+import electrician from "./electrician.jpg";
+import solars from "./solars.jpg";
+import tricity from "./tricity.jpg";
 
 export {
+  tricity,
+  solars,
+  electrician,
+  bulb2,
+  circuitbreaker,
+  bulb,
+  skyscrapper,
   team,
   mapbanner,
   mapbanner2,
