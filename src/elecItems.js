@@ -6,6 +6,9 @@ import {
   solarpanel,
   switches,
   transformers,
+  man1,
+  man2,
+  man4,
 } from "./images/imports.js";
 
 export const items = [
@@ -49,6 +52,62 @@ export const questions = [
       "what is the difference between finding clients online and locally?",
     answer:
       "Many people has the notion that enlightenment is one state. Many also believe that when it is attained, a person is forever in that state.For your necessary discernment. Thank you for reading.",
+  },
+];
+
+export const FAQS = [
+  ...questions,
+  {
+    id: 4,
+    question:
+      "what is the difference between finding clients online and locally?",
+    answer:
+      "Many people has the notion that enlightenment is one state. Many also believe that when it is attained, a person is forever in that state.For your necessary discernment. Thank you for reading.",
+  },
+  {
+    id: 5,
+    question:
+      "what is the difference between finding clients online and locally?",
+    answer:
+      "Many people has the notion that enlightenment is one state. Many also believe that when it is attained, a person is forever in that state.For your necessary discernment. Thank you for reading.",
+  },
+  {
+    id: 6,
+    question:
+      "what is the difference between finding clients online and locally?",
+    answer:
+      "Many people has the notion that enlightenment is one state. Many also believe that when it is attained, a person is forever in that state.For your necessary discernment. Thank you for reading.",
+  },
+  {
+    id: 7,
+    question:
+      "what is the difference between finding clients online and locally?",
+    answer:
+      "Many people has the notion that enlightenment is one state. Many also believe that when it is attained, a person is forever in that state.For your necessary discernment. Thank you for reading.",
+  },
+];
+
+export const testimonial = [
+  {
+    id: 1,
+    name: "Success",
+    desc: "I am extremely impressed with the level of security and peace of mind that Security has provided. Their advanced alarm system and 24/7 monitoring have made me feel safe in my own home. I recommend their services.",
+    img: man1,
+    position: "IT Assistant",
+  },
+  {
+    id: 2,
+    name: "Sara Marthys",
+    desc: "Since partnering with Security for our commercial security needs, we have experienced a significant increase in the overall safety and of our premises. We are grateful for their expertise and recommend their services.",
+    img: man2,
+    position: "Manager",
+  },
+  {
+    id: 3,
+    name: "Elton Watson",
+    desc: "The installation process was smooth, and the technicians were professional and efficient. The system itself is user-friendly, and the mobile app allows me to monitor and control my security system from anywhere.",
+    img: man4,
+    position: "Manager",
   },
 ];
 

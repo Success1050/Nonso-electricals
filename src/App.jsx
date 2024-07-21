@@ -10,6 +10,10 @@ import Footer from "./PageLayout/Footer.jsx";
 import HeaderComponent from "./PageLayout/HeaderComponent.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SharedLayout from "./PageLayout/SharedLayout.jsx";
+import PricingComponent from "./pages/PricingComponent.jsx";
+import FaqComponent from "./pages/FaqComponent.jsx";
+import OurTeamComponents from "./pages/OurTeamComponents.jsx";
+import TestimonialsComponents from "./pages/TestimonialsComponents.jsx";
 const App = () => {
   return (
     <>
@@ -21,6 +25,16 @@ const App = () => {
             <Route path='/' element={<SharedLayout />}>
               <Route index element={<Home />} />
               <Route path='/About' element={<About />} />
+              <Route path='/PricingComponent' element={<PricingComponent />} />
+              <Route path='/FaqComponent' element={<FaqComponent />} />
+              <Route
+                path='/OurTeamComponents'
+                element={<OurTeamComponents />}
+              />
+              <Route
+                path='/TestimonialsComponents'
+                element={<TestimonialsComponents />}
+              />
               <Route path='/Services' element={<Services />} />
               <Route path='/Projects' element={<Projects />} />
               <Route path='/Shop' element={<Shop />} />

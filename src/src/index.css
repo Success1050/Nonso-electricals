@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Lora:wght@500&family=Playfair+Display&family=Poppins:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.fixedNav {
+  @apply fixed top-cusTop left-cusLeft pl-cuspl gap-cusgap z-zCus;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: rgba(0, 0, 0, 0.9);
+  font-weight: 500;
+  font-style: normal;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+header {
+  background: url("./images/banner2.jpg") center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.header2 {
+  background: url("./images/banner2.jpg") center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.font {
+  font-size: 30px;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+.btn,
+.btn2 {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  color: rgb(234, 88, 12, 0.8);
+}
+
+.btn2:hover {
+  background-color: rgb(234, 88, 12, 0.8);
+}
+
+.btn2 {
+  background-color: rgba(234, 88, 12, 1);
+  transition: all 0.3s ease-in;
+  border: 1px solid rgba(234, 88, 12, 1);
+}
+
+.contact-btn {
+  transition: all 0.3s ease-in;
+}
+
+.contact-btn:hover {
+  background-color: rgba(234, 88, 12, 1);
+}
+
+.btn2:hover,
+.contact-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.overlay:hover .overflow {
+  height: 100%;
+}
+
+.overturn:hover .overturn2 {
+  height: 100%;
+}
+
+.closebtn {
+  display: none;
+}
+
+.overturn:hover .desc {
+  opacity: 1;
+}
+
+.banner-text-link {
+  @apply p-4 w-40 rounded-lg text-center  cursor-pointer border-2;
+}
+
+.banner-text-link1 {
+  @apply w-full h-full flex items-center justify-center rounded-lg;
+}
+
+.item1-child {
+  @apply cussm:basis-full cusLg:basis-2/5 basis-2/5;
+}
+
+.para:hover {
+  gap: 0.9rem;
+  transition: all 0.5s;
+}
+
+.selected {
+  @apply max-h-48 transition-all duration-500 ease-linear;
+}
+
+span {
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  transform: scale(0);
+}
+
+.progresstext {
+  animation: showtext 0.5s 1s linear forwards;
+  opacity: 1;
+}
+
+@keyframes animate {
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes showtext {
+  0%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 987px) {
+  .active {
+    left: 0;
+  }
+
+  .contact-btn {
+    transition: all 0.3s ease-in;
+  }
+
+  .contact-btn:hover {
+    background-color: rgba(234, 88, 12, 1);
+  }
+
+  .btn2:hover,
+  .contact-btn:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .advert > :nth-child(3) {
+    grid-column: 1/ -1;
+    justify-self: center;
+  }
+
+  .overturn:hover .overturn2 {
+    height: 100%;
+  }
+  .overturn:hover .desc {
+    opacity: 1;
+    bottom: 40%;
+  }
+
+  .overturn2 {
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .closebtn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .header-text {
+    line-height: 37px;
+    font-size: 25px;
+    margin-top: 5rem;
+  }
+
+  .heading {
+    line-height: 50px;
+  }
+
+  .banner-text-link {
+    align-self: flex-start;
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .about > :nth-child(3) {
+    grid-column: 1/ -1;
+    justify-self: center;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 638px) {
+  .header-text {
+    line-height: 27px;
+    font-size: 16px;
+    margin-top: 5rem;
+  }
+
+  .heading {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .services {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .contact-btn,
+  .btn2 {
+    min-width: fit-content;
+  }
+
+  .advert3 p:last-child {
+    font-size: 1rem;
+  }
+}

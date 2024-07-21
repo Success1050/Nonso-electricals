@@ -21,8 +21,14 @@ import circuitbreaker from "./circuitbreaker.jpg";
 import electrician from "./electrician.jpg";
 import solars from "./solars.jpg";
 import tricity from "./tricity.jpg";
+import man1 from "./man 1.jpg";
+import man2 from "./man 2.jpg";
+import man4 from "./man 4.jpg";
 
 export {
+  man1,
+  man2,
+  man4,
   tricity,
   solars,
   electrician,

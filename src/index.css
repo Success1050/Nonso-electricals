@@ -96,6 +96,32 @@ button {
   opacity: 1;
 }
 
+.aboutnavs {
+  width: max-content;
+  height: max-content;
+  display: none;
+  background-color: white;
+  color: #000;
+}
+
+.child {
+  width: 5%;
+  height: 100%;
+  background-color: rgba(234, 88, 12, 0.7);
+  top: 0;
+  left: 0;
+  z-index: -20;
+}
+
+.parent:hover .child {
+  width: 100%;
+  transition: all 0.5s ease-in;
+}
+
+.addheight:hover .aboutnavs {
+  display: block;
+}
+
 .banner-text-link {
   @apply p-4 w-40 rounded-lg text-center  cursor-pointer border-2;
 }
@@ -137,6 +163,12 @@ span {
   0%,
   100% {
     opacity: 1;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 987px) {
+  .element > :nth-child(3) {
+    transform: translateX(50%);
   }
 }
 
@@ -192,6 +224,10 @@ span {
 
   .heading {
     line-height: 50px;
+  }
+
+  .banner-link {
+    margin-top: 5rem;
   }
 
   .banner-text-link {

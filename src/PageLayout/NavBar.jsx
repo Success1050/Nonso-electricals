@@ -5,6 +5,8 @@ import { SmallScreenSize } from "./SmallScreenSize.jsx";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isHover, setIsHover] = useState(false);
+  console.log(isHover);
 
   const toggleSideBar = () => {
     setIsOpen(!isOpen);
@@ -20,7 +22,7 @@ const NavBar = () => {
     <>
       <nav className='sticky top-0 left-0 w-full backdrop-blur-blurCustom border-b-2 border-gray-400 bg-bgColor1 p-cusPd cussm:px-5 cusLg:p-cusPd z-30'>
         <div className='flex items-center justify-between h-cusHeight relative'>
-          <h2 className='font-cusFontFamily text-2xl font-extrabold text-orange-600'>
+          <h2 className='font-cusFontFamily cusLg:text-2xl font-extrabold text-orange-600'>
             Nonso Electrical
           </h2>
 
@@ -36,9 +38,37 @@ const NavBar = () => {
               Home
             </Link>
 
-            <Link to='/about' className='btn'>
-              About
-            </Link>
+            <div
+              className='relative addheight px-6 py-6'
+              onMouseEnter={() => {
+                return setIsHover(true);
+              }}
+              onMouseLeave={() => {
+                return setIsHover(false);
+              }}
+            >
+              <Link to='/about' className='btn'>
+                About
+              </Link>
+
+              {isHover && (
+                <div className=' absolute aboutnavs p-4 rounded-cusBradius2 top-16 right-1/2 translate-x-1/2 shadow-lg'>
+                  <Link to='/PricingComponent' className='btn'>
+                    <li>Pricing</li>
+                  </Link>
+                  <Link to='/OurTeamComponents' className='btn'>
+                    <li>Our Team</li>
+                  </Link>
+                  <Link to='FaqComponent' className='btn'>
+                    <li>Faq</li>
+                  </Link>
+                  <Link to='TestimonialsComponents' className='btn'>
+                    <li>Testimonianls</li>
+                  </Link>
+                </div>
+              )}
+            </div>
+
             <Link to='/services' className='btn'>
               Services
             </Link>
