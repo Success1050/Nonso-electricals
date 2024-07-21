@@ -16,11 +16,16 @@ export default {
         cusBgCol5: "rgba(255, 255, 255, .3)",
       },
 
+      backgroundImage: {
+        cusbackgroundimage: "linear-gradient(8deg, #FAD961 31%, #F76B1C 80%)",
+      },
+
       colors: {
         cusBtnColor: "rgb(234, 88, 12, 0.8)",
         cuscolor: "#475467",
         cusCol2: "rgba(234, 88, 12, 1)",
         cusBgCol6: "#101828",
+        cusBgCol7: "#475467",
       },
 
       backdropBlur: {
@@ -68,6 +73,7 @@ export default {
         cuspd5: "6px 10px",
         cusgap3: "15px",
         cuspd6: "10px",
+        cuspt7: "230px",
       },
 
       lineHeight: {
@@ -95,6 +101,8 @@ export default {
         cusWidth11: "50vw",
         cusWidth12: "370px",
         cusWidth13: "42px",
+        cusWidth14: "516px",
+        cusWidth15: "300px",
       },
 
       maxWidth: {
@@ -112,6 +120,7 @@ export default {
         cusheight7: "42px",
         cusheight8: "2px",
         cusheight9: "500px",
+        cusheight9: "315px",
       },
 
       zIndex: {

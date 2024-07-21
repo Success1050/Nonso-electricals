@@ -24,8 +24,12 @@ import tricity from "./tricity.jpg";
 import man1 from "./man 1.jpg";
 import man2 from "./man 2.jpg";
 import man4 from "./man 4.jpg";
+import man5 from "./man5.jpg";
+import grid from "./grid.jpg";
 
 export {
+  grid,
+  man5,
   man1,
   man2,
   man4,

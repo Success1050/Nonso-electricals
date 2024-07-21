@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaFacebook, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -33,10 +34,10 @@ const Footer = () => {
         </div>
         <div className='basis-cusBasis2 grid grid-cols-3 gap-y-6 cussm:gap-x-4'>
           <h4 className='transition-all duration-500 hover:text-cusBtnColor cursor-pointer text-center'>
-            Home
+            <Link to='/'>Home</Link>
           </h4>
           <h4 className='transition-all duration-500 hover:text-cusBtnColor cursor-pointer cussm:flex-wrap text-center'>
-            Our Team
+            <Link to='/OurTeamComponents'>Our Team</Link>
           </h4>
           <h4 className='transition-all duration-500 hover:text-cusBtnColor cursor-pointer text-center'>
             Project
