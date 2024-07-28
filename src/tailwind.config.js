@@ -84,6 +84,7 @@ export default {
       boxShadowColor: {
         boxShadowColor: {
           cusshadow: " 0 0 10px rgba(16, 24, 40, .18);",
+          cusshadow2: "0 0 30px rgba(16, 24, 40, .18)",
         },
       },
 
@@ -103,6 +104,7 @@ export default {
         cusWidth13: "42px",
         cusWidth14: "516px",
         cusWidth15: "300px",
+        cusWidth16: "100px",
       },
 
       maxWidth: {
@@ -121,6 +123,7 @@ export default {
         cusheight8: "2px",
         cusheight9: "500px",
         cusheight9: "315px",
+        cusheight10: "100px",
       },
 
       zIndex: {
@@ -190,6 +193,7 @@ export default {
         cusgridcul: "60% 25%",
         cusgridcul2: "1/ -1",
         cusgridcul3: "1px",
+        cusgridcul4: "28% 23% 23% 23%",
       },
 
       animation: {

@@ -26,8 +26,58 @@ import man2 from "./man 2.jpg";
 import man4 from "./man 4.jpg";
 import man5 from "./man5.jpg";
 import grid from "./grid.jpg";
+import elect from "./elect.jpg";
+import electman from "./electman.jpg";
+import smallelect from "./smallelect.jpg";
+import item1 from "./item1.jpg";
+import item2 from "./item2.jpg";
+import item3 from "./item3.jpg";
+import item4 from "./item4.jpg";
+import item5 from "./item5.jpg";
+import item6 from "./item6.jpg";
+import item7 from "./item7.jpg";
+import item8 from "./item8.jpg";
+import item9 from "./item9.jpg";
+import item10 from "./item10.jpg";
+import item11 from "./item11.jpg";
+import item12 from "./item12.jpg";
+import item13 from "./item13.jpg";
+import item14 from "./item14.jpg";
+import item15 from "./item15.jpg";
+import item16 from "./item16.jpg";
+import item17 from "./item17.jpg";
+import item18 from "./item18.jpg";
+import item19 from "./item19.jpg";
+import item20 from "./item20.jpg";
+import item21 from "./item21.jpg";
+import item22 from "./item22.jpg";
 
 export {
+  item14,
+  item15,
+  item16,
+  item17,
+  item18,
+  item19,
+  item20,
+  item21,
+  item22,
+  item7,
+  item8,
+  item9,
+  item10,
+  item11,
+  item12,
+  item13,
+  item5,
+  item6,
+  item4,
+  item3,
+  item2,
+  item1,
+  smallelect,
+  elect,
+  electman,
   grid,
   man5,
   man1,

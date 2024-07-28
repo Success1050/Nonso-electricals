@@ -9,6 +9,28 @@ import {
   man1,
   man2,
   man4,
+  item1,
+  item2,
+  item3,
+  item4,
+  item5,
+  item6,
+  item7,
+  item8,
+  item9,
+  item10,
+  item11,
+  item12,
+  item13,
+  item14,
+  item15,
+  item16,
+  item17,
+  item18,
+  item19,
+  item20,
+  item21,
+  item22,
 } from "./images/imports.js";
 
 export const items = [
@@ -173,5 +195,196 @@ export const reviews = [
     description:
       "I highly recommend Security for their exceptional security services. Their team installed a comprehensive video surveillance system in our commercial property, and we have been impressed with the quality of the cameras and the ease of monitoring through their user-friendly mobile app. John Dain Manager starStarStarStarStar I am extremely satisfied with the alarm system installation and monitoring services provided by Security. Their prompt response and efficient monitoring have proven invaluable in ensuring the safety of our home. Their knowledgeable staff took the time to understand our specific needs.",
     position: "Clerk",
+  },
+];
+
+export const services = [
+  {
+    id: 1,
+    title: "Electrical Installation",
+    desc: "Client Needs: Just as consultants assess client needs in security planning, electrical installers evaluate the specific requirements for the electrical system. This includes factors such as load capacity, power distribution, lighting, and safety features.",
+  },
+  {
+    id: 2,
+    title: "Electrical Installation",
+    desc: "Client Needs: Just as consultants assess client needs in security planning, electrical installers evaluate the specific requirements for the electrical system. This includes factors such as load capacity, power distribution, lighting, and safety features.",
+  },
+  {
+    id: 3,
+    title: "Electrical Installation",
+    desc: "Client Needs: Just as consultants assess client needs in security planning, electrical installers evaluate the specific requirements for the electrical system. This includes factors such as load capacity, power distribution, lighting, and safety features.",
+  },
+];
+
+export const moreServices = [
+  ...services,
+  {
+    id: 4,
+    title: "Electrical Installation",
+    desc: "Client Needs: Just as consultants assess client needs in security planning, electrical installers evaluate the specific requirements for the electrical system. This includes factors such as load capacity, power distribution, lighting, and safety features.",
+  },
+  {
+    id: 5,
+    title: "Electrical Installation",
+    desc: "Client Needs: Just as consultants assess client needs in security planning, electrical installers evaluate the specific requirements for the electrical system. This includes factors such as load capacity, power distribution, lighting, and safety features.",
+  },
+  {
+    id: 6,
+    title: "Electrical Installation",
+    desc: "Client Needs: Just as consultants assess client needs in security planning, electrical installers evaluate the specific requirements for the electrical system. This includes factors such as load capacity, power distribution, lighting, and safety features.",
+  },
+];
+
+export const allProject = [
+  {
+    id: 1,
+    title: " Enhancing Financial Performance For Insurance Company",
+    img: item1,
+    desc: "  We utilized data analytics to identify trends and patterns in modern technology",
+  },
+  {
+    id: 2,
+    title: " Enhancing Financial Performance For Insurance Company",
+    img: item2,
+    desc: "  We utilized data analytics to identify trends and patterns in modern technology",
+  },
+  {
+    id: 3,
+    title: " Enhancing Financial Performance For Insurance Company",
+    img: item3,
+    desc: "  We utilized data analytics to identify trends and patterns in modern technology",
+  },
+  {
+    id: 4,
+    title: " Enhancing Financial Performance For Insurance Company",
+    img: item4,
+    desc: "  We utilized data analytics to identify trends and patterns in modern technology",
+  },
+  {
+    id: 5,
+    title: " Enhancing Financial Performance For Insurance Company",
+    img: item5,
+    desc: "  We utilized data analytics to identify trends and patterns in modern technology",
+  },
+  {
+    id: 6,
+    title: " Enhancing Financial Performance For Insurance Company",
+    img: item6,
+    desc: "  We utilized data analytics to identify trends and patterns in modern technology",
+  },
+];
+
+export const commercial = [
+  {
+    id: 1,
+    title: " Enhancing Financial Performance For Insurance Company",
+    img: item17,
+    desc: "  We utilized data analytics to identify trends and patterns in modern technology",
+  },
+  {
+    id: 2,
+    title: " Enhancing Financial Performance For Insurance Company",
+    img: item22,
+    desc: "  We utilized data analytics to identify trends and patterns in modern technology",
+  },
+  {
+    id: 3,
+    title: " Enhancing Financial Performance For Insurance Company",
+    img: item19,
+    desc: "  We utilized data analytics to identify trends and patterns in modern technology",
+  },
+  {
+    id: 4,
+    title: " Enhancing Financial Performance For Insurance Company",
+    img: item15,
+    desc: "  We utilized data analytics to identify trends and patterns in modern technology",
+  },
+  {
+    id: 5,
+    title: " Enhancing Financial Performance For Insurance Company",
+    img: item16,
+    desc: "  We utilized data analytics to identify trends and patterns in modern technology",
+  },
+  {
+    id: 6,
+    title: " Enhancing Financial Performance For Insurance Company",
+    img: item6,
+    desc: "  We utilized data analytics to identify trends and patterns in modern technology",
+  },
+];
+export const data = [
+  {
+    id: 1,
+    title: " Enhancing Financial Performance For Insurance Company",
+    img: item7,
+    desc: "  We utilized data analytics to identify trends and patterns in modern technology",
+  },
+  {
+    id: 2,
+    title: " Enhancing Financial Performance For Insurance Company",
+    img: item8,
+    desc: "  We utilized data analytics to identify trends and patterns in modern technology",
+  },
+  {
+    id: 3,
+    title: " Enhancing Financial Performance For Insurance Company",
+    img: item9,
+    desc: "  We utilized data analytics to identify trends and patterns in modern technology",
+  },
+  {
+    id: 4,
+    title: " Enhancing Financial Performance For Insurance Company",
+    img: item10,
+    desc: "  We utilized data analytics to identify trends and patterns in modern technology",
+  },
+  {
+    id: 5,
+    title: " Enhancing Financial Performance For Insurance Company",
+    img: item11,
+    desc: "  We utilized data analytics to identify trends and patterns in modern technology",
+  },
+  {
+    id: 6,
+    title: " Enhancing Financial Performance For Insurance Company",
+    img: item12,
+    desc: "  We utilized data analytics to identify trends and patterns in modern technology",
+  },
+];
+export const residential = [
+  {
+    id: 1,
+    title: " Enhancing Financial Performance For Insurance Company",
+    img: item13,
+    desc: "  We utilized data analytics to identify trends and patterns in modern technology",
+  },
+  {
+    id: 2,
+    title: " Enhancing Financial Performance For Insurance Company",
+    img: item14,
+    desc: "  We utilized data analytics to identify trends and patterns in modern technology",
+  },
+  {
+    id: 3,
+    title: " Enhancing Financial Performance For Insurance Company",
+    img: item21,
+    desc: "  We utilized data analytics to identify trends and patterns in modern technology",
+  },
+  {
+    id: 4,
+    title: " Enhancing Financial Performance For Insurance Company",
+    img: item18,
+    desc: "  We utilized data analytics to identify trends and patterns in modern technology",
+  },
+  {
+    id: 5,
+    title: " Enhancing Financial Performance For Insurance Company",
+    img: item17,
+    desc: "  We utilized data analytics to identify trends and patterns in modern technology",
+  },
+  {
+    id: 6,
+    title: " Enhancing Financial Performance For Insurance Company",
+    img: item20,
+    desc: "  We utilized data analytics to identify trends and patterns in modern technology",
   },
 ];

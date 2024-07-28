@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaTimes } from "react-icons/fa";
+import { FaTimes, FaChevronDown, FaChevronUp } from "react-icons/fa";
 
-export const SmallScreenSize = ({ isOpen, toggleMenu, toggleSideBar }) => {
+export const SmallScreenSize = ({
+  isOpen,
+  toggleMenu,
+  toggleSideBar,
+  setIsOpen,
+}) => {
+  const [isDisplay, setIsDisplay] = useState(false);
+
+  const handleClick = () => {
+    setIsDisplay(false);
+    setIsOpen(false);
+  };
   return (
     <div className='relative'>
       <div
@@ -10,21 +21,81 @@ export const SmallScreenSize = ({ isOpen, toggleMenu, toggleSideBar }) => {
           isOpen ? "active" : "left-cusLeft"
         }`}
       >
-        <Link to='/' className='btn' onClick={toggleMenu}>
-          Home
-        </Link>
-        <Link to='/about' className='btn' onClick={toggleMenu}>
-          About
-        </Link>
-        <Link to='/services' className='btn' onClick={toggleMenu}>
-          Services
-        </Link>
-        <Link to='/projects' className='btn' onClick={toggleMenu}>
-          Projects
-        </Link>
-        <Link to='/shop' className='btn' onClick={toggleMenu}>
-          Shop
-        </Link>
+        <div className='w-full'>
+          <Link to='/' className='btn' onClick={toggleMenu}>
+            Home
+          </Link>
+        </div>
+
+        <div className='flex gap-x-28 items-center  w-full success'>
+          <Link to='/about' className='btn' onClick={toggleMenu}>
+            About
+          </Link>
+          <div className='pl-7'>
+            <button
+              type='button'
+              className='text-cusFontSize3'
+              onClick={() => setIsDisplay(!isDisplay)}
+            >
+              {isDisplay === true ? (
+                <FaChevronUp></FaChevronUp>
+              ) : (
+                <FaChevronDown></FaChevronDown>
+              )}
+            </button>
+          </div>
+        </div>
+
+        {isDisplay && (
+          <div className='pl-4 h-fit success'>
+            <Link
+              to='/PricingComponent'
+              className='btn block pt-3'
+              onClick={handleClick}
+            >
+              <li>Pricing</li>
+            </Link>
+            <Link
+              to='/OurTeamComponents'
+              className='btn block pt-3'
+              onClick={handleClick}
+            >
+              <li>Our Team</li>
+            </Link>
+            <Link
+              to='FaqComponent'
+              className='btn block pt-3'
+              onClick={handleClick}
+            >
+              <li>Faq</li>
+            </Link>
+            <Link
+              to='TestimonialsComponents'
+              className='btn block pt-3'
+              onClick={handleClick}
+            >
+              <li>Testimonianls</li>
+            </Link>
+          </div>
+        )}
+
+        <div className='w-full'>
+          <Link to='/services' className='btn' onClick={toggleMenu}>
+            Services
+          </Link>
+        </div>
+
+        <div className='w-full'>
+          <Link to='/projects' className='btn' onClick={toggleMenu}>
+            Projects
+          </Link>
+        </div>
+
+        <div className='w-full'>
+          <Link to='/shop' className='btn' onClick={toggleMenu}>
+            Shop
+          </Link>
+        </div>
 
         <div
           className=' border-2 p-4 w-40 rounded-lg text-center btn2'

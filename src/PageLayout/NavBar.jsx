@@ -30,6 +30,7 @@ const NavBar = () => {
             isOpen={isOpen}
             toggleMenu={toggleMenu}
             toggleSideBar={toggleSideBar}
+            setIsOpen={setIsOpen}
           />
 
           {/* DESKTOP SCREEN SIZE */}
@@ -83,7 +84,7 @@ const NavBar = () => {
               <Link to='/contact'>Contact</Link>
             </div>
           </div>
-          <div className='flex items-center cussm:gap-2 cusLg:gap-0 justify-center'>
+          <div className='flex items-center cussm:gap-6 xl:gap-0 justify-center cusLg:ml-6 xl:ml-0'>
             <div className='relative cart cussm:mr-cusmr2 cusLg:mr-16'>
               <Link to='/cart' className='btn text-xl'>
                 <FaShoppingCart className=' text-orange-600' />

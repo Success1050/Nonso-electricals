@@ -6,6 +6,7 @@ import FullFaqSection from "../PageLayout/FullFaqSection";
 // import { testimonial } from "../elecItems";
 // import { man1, man2, man4 } from "../images/imports";
 import CustomerFeedback from "../PageLayout/CustomerFeedback";
+import Feedback from "./Feedback";
 const PricingComponent = () => {
   return (
     <>
@@ -128,7 +129,7 @@ const PricingComponent = () => {
           Happy Customers Say About Project
         </h2>
 
-        <CustomerFeedback />
+        <Feedback />
       </section>
     </>
   );

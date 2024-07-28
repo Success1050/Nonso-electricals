@@ -42,9 +42,34 @@ header {
   font-size: 30px;
 }
 
+.project-child {
+  bottom: -500px;
+  left: 0;
+  right: 0;
+  min-height: 50%;
+  width: 100%;
+  border-left: 1px solid #f76b1c;
+  border-bottom-right-radius: #f76b1c;
+  border-right: 1px solid #f76b1c;
+  border-bottom: 1px solid #f76b1c;
+}
+
+.project:hover .project-child {
+  bottom: 0;
+  transition: all 0.4s ease;
+}
+
 button {
   outline: none;
   border: none;
+}
+
+li {
+  list-style: none;
+}
+
+.success {
+  transition: height 0.4s ease-in;
 }
 
 .gradient {
@@ -77,6 +102,10 @@ button {
 
 .contact-btn:hover {
   background-color: rgba(234, 88, 12, 1);
+}
+
+.tabs {
+  transition: all 0.4s ease;
 }
 
 .btn2:hover,

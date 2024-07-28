@@ -2,11 +2,9 @@ import Reveal from "../Reveal";
 
 import HeaderComponent from "../PageLayout/HeaderComponent";
 
-import { reviews } from "../elecItems";
+import { reviews, services } from "../elecItems";
 import { Link } from "react-router-dom";
 import { FaArrowRight, FaLightbulb, FaStarHalf, FaStar } from "react-icons/fa";
-// import { useState } from "react";
-// import { questions } from "../elecItems";
 
 import {
   icon,
@@ -19,7 +17,6 @@ import {
   team,
 } from "../images/imports";
 import Progressbar from "../PageLayout/progressbar/Progressbar";
-import Footer from "../PageLayout/Footer";
 import Companies from "./Companies";
 import AdvertPageComponent from "./AdvertPageComponent";
 import FaqSection from "../PageLayout/FaqSection";
@@ -49,11 +46,9 @@ const HomeComponent = () => {
     visible: { opacity: 1, y: 0 },
   };
 
-  // const { dropdownState, isdropdownState, questionTag } = useQuestionTag();
-
   return (
     <>
-      <header className="bg-[url('./src/images/banner.png')]">
+      <header className="bg-[url('./src/images/banner.png')] overflow-hidden">
         <HeaderComponent>
           <Reveal variants={bottomVariants}>
             <div>
@@ -92,7 +87,7 @@ const HomeComponent = () => {
         </HeaderComponent>
       </header>
 
-      <section className='bg-white p-14 services'>
+      <section className='bg-white p-14 services overflow-hidden'>
         <Reveal variants={bottomVariants}>
           <div className='mx-10 flex justify-between items-center pt-14 gap-3 cussm:flex-col cussmall:flex-row cussm:gap-2 sm:gap-3'>
             <h2 className='text-3xl font-bold mb-3'>Services</h2>
@@ -103,66 +98,32 @@ const HomeComponent = () => {
             </button>
           </div>
           <div className='parent cussm:grid-cols-[100%] grid cusLg:grid-cols-3 p-6 gap-6 justify-center items-center'>
-            <div className='overlay flex flex-col gap-8 justify-start border-orange-200 p-3 bg-slate-50 relative'>
-              <div className='overflow absolute w-full h-cusHeight3 cursor-pointer top-0 left-0 bg-cusBgCol2 transition-custom duration-cusDuration'></div>
-              <span className='col-1 cussm:justify-center cussm:items-center cussm:px-4 cusLg:justify-start cusLg:items-start cusLg:px-0 text-orange-600'>
-                01
-              </span>
-              <h2 className='font-bold text-xl'>Electrical Installation</h2>
-              <p>
-                Client Needs: Just as consultants assess client needs in
-                security planning, electrical installers evaluate the specific
-                requirements for the electrical system. This includes factors
-                such as load capacity, power distribution, lighting, and safety
-                features.
-              </p>
-              <button className='banner-text-link2 border-2 rounded-lg text-center bg-orange-600 cursor-pointer btn2 mt-4 w-36 h-16 block cussm:self-start z-20'>
-                <Link to='/about' className='banner-text-link1'>
-                  Learn More
-                </Link>
-              </button>
-            </div>
-
-            <div className='overlay flex flex-col gap-8 justify-start border-orange-200 p-3 bg-slate-50 relative'>
-              <div className='overflow absolute w-full h-cusHeight3 cursor-pointer top-0 left-0 bg-cusBgCol2 transition-custom duration-cusDuration'></div>
-              <span className='text-orange-600 col-1'>02</span>
-              <h2 className='font-bold text-xl'>Electrical Installation</h2>
-              <p>
-                Client Needs: Just as consultants assess client needs in
-                security planning, electrical installers evaluate the specific
-                requirements for the electrical system. This includes factors
-                such as load capacity, power distribution, lighting, and safety
-                features.
-              </p>
-              <button className='border-2 rounded-lg text-center bg-orange-600 cursor-pointer btn2 mt-4 w-36 h-16 block cussm:self-start z-20'>
-                <Link to='/about' className='banner-text-link1'>
-                  Learn More
-                </Link>
-              </button>
-            </div>
-
-            <div className='overlay flex flex-col gap-8 justify-start border-orange-200 p-3 bg-slate-50 relative'>
-              <div className='overflow absolute w-full h-cusHeight3 cursor-pointer top-0 left-0 bg-cusBgCol2 transition-custom duration-cusDuration'></div>
-              <span className='text-orange-600 col-1'>03</span>
-              <h2 className='font-bold text-xl'>Electrical Installation</h2>
-              <p>
-                Client Needs: Just as consultants assess client needs in
-                security planning, electrical installers evaluate the specific
-                requirements for the electrical system. This includes factors
-                such as load capacity, power distribution, lighting, and safety
-                features.
-              </p>
-              <button className='border-2 rounded-lg text-center bg-orange-600 cursor-pointer btn2 mt-4 w-36 h-16 cussm:self-start z-20 block'>
-                <Link to='/about' className='banner-text-link1'>
-                  Learn More
-                </Link>
-              </button>
-            </div>
+            {services.map((service) => {
+              const { id, title, desc } = service;
+              return (
+                <div
+                  className='overlay flex flex-col gap-8 justify-start border-orange-200 p-3 bg-slate-50 relative'
+                  key={id}
+                >
+                  <div className='overflow absolute w-full h-cusHeight3 cursor-pointer top-0 left-0 bg-cusBgCol2 transition-custom duration-cusDuration'></div>
+                  <span className='col-1 cussm:justify-center cussm:items-center cussm:px-4 cusLg:justify-start cusLg:items-start cusLg:px-0 text-orange-600'>
+                    0{id}
+                  </span>
+                  <h2 className='font-bold text-xl'>{title}</h2>
+                  <p>{desc}</p>
+                  <button className='banner-text-link2 border-2 rounded-lg text-center bg-orange-600 cursor-pointer btn2 mt-4 w-36 h-16 block cussm:self-start z-20'>
+                    <Link to='/about' className='banner-text-link1'>
+                      Learn More
+                    </Link>
+                  </button>
+                </div>
+              );
+            })}
           </div>
         </Reveal>
       </section>
 
-      <section className='bg-gray-100 p-8'>
+      <section className='bg-gray-100 p-8 overflow-hidden'>
         <div className='item1 cussm:flex-col cusLg:flex-row flex justify-around items-center cussm:gap-cusgap2 cusLg:gap-0'>
           <Reveal className='cussm:w-full cusLg:w-1/2' variants={leftVariants}>
             <div className='item1-child '>
@@ -196,7 +157,7 @@ const HomeComponent = () => {
         </div>
       </section>
 
-      <section className='bg-white p-8'>
+      <section className='bg-white p-8 overflow-hidden'>
         <div className='item1 cussm:flex-col cusLg:flex-row flex justify-around items-center cussm:gap-cusgap2 cusLg:gap-0'>
           <Reveal className='cussm:w-full cusLg:w-1/2' variants={leftVariants}>
             <div className='item1-child item2 cussm:order-2 cusLg:order-1'>
@@ -230,7 +191,7 @@ const HomeComponent = () => {
         </div>
       </section>
 
-      <section className='bg-gray-100 p-8'>
+      <section className='bg-gray-100 p-8 overflow-hidden'>
         <Reveal variants={topVariants}>
           <div className='flex cussm:flex-col cusLg:flex-row cussm:text-center cusLg:text-left cussm:gap-cusgap2 cusLg:gap-0 advert1 items-center justify-between basis-2/5 px-8'>
             <div className='flex flex-col'>
@@ -256,14 +217,14 @@ const HomeComponent = () => {
         </Reveal>
       </section>
 
-      <section className='bg-white p-8'>
+      <section className='bg-white p-8 cussm:p-0 sm:p-8 overflow-hidden'>
         <Reveal variants={bottomVariants}>
           <div className='shop flex cussm:flex-col cusLg:flex-row cussm:text-center cusLg:text-left cussm:gap-cusgap2 cusLg:gap-0 advert1 items-center justify-between basis-2/5 px-8'>
             <h2 className='text-3xl font-bold mb-3 cussm:text-cusFontSize cussmall:text-3xl cussm:text-center text-center sm:text-left'>
               Discover Our Electrical Materials
             </h2>
 
-            <button className='border-2 rounded-lg text-center bg-orange-600 cursor-pointer btn2 sm:mt-4 w-32 h-16 z-20 cussm:w-full sm:w-32 text-cusFontSize1 cussm:mt-0 cussm:mb-3 sm:mb-2'>
+            <button className='border-2 rounded-lg text-center bg-orange-600 cursor-pointer btn2 sm:mt-4 w-32 h-16 z-20 cussm:w-full lg:w-32 text-cusFontSize1 cussm:mt-0 cussm:mb-3 sm:mb-6'>
               <Link to='/about' className='banner-text-link1'>
                 View All
               </Link>
@@ -327,7 +288,7 @@ const HomeComponent = () => {
         </Reveal>
       </section>
 
-      <section className='bg-gray-100 p-8'>
+      <section className='bg-gray-100 p-8 cussm:p-0 md:p-8 overflow-hidden'>
         <Reveal variants={bottomVariants}>
           <div className='flex cussm:items-center cussm:justify-center cusLg:item-start cusLg:justify-normal'>
             <img src={icon} alt='w-full cussm:m-auto' />
@@ -365,14 +326,14 @@ const HomeComponent = () => {
       </section>
 
       {/* COMPANIES SECTION */}
-      <section className='bg-cusBgCol p-8'>
+      <section className='bg-cusBgCol p-8 overflow-hidden'>
         <Reveal variants={bottomVariants}>
           <Companies />
           <Testimonials />
         </Reveal>
       </section>
 
-      <section className='bg-white p-8'>
+      <section className='bg-white p-8 overflow-hidden'>
         <RatingSection>
           <Reveal className='cussm:w-full cusLg:w-1/2' variants={leftVariants}>
             <div className='basis-cusBasis2'>
@@ -402,7 +363,7 @@ const HomeComponent = () => {
         </RatingSection>
       </section>
 
-      <section className='bg-gray-100 p-8'>
+      <section className='bg-gray-100 p-8 overflow-hidden'>
         <Reveal variants={topVariants}>
           <PricingSection />
         </Reveal>
