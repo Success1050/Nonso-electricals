@@ -51,8 +51,20 @@ import item19 from "./item19.jpg";
 import item20 from "./item20.jpg";
 import item21 from "./item21.jpg";
 import item22 from "./item22.jpg";
+import item23 from "./plugshop.png";
+import item24 from "./shopbulb.jpg";
+import item25 from "./shopelectrical.png";
+import item26 from "./chandaliershop.jpg";
+import item28 from "./item26.png";
+import item27 from "./item27.png";
 
 export {
+  item27,
+  item28,
+  item26,
+  item25,
+  item23,
+  item24,
   item14,
   item15,
   item16,

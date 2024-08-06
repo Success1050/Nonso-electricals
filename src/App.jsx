@@ -14,35 +14,41 @@ import PricingComponent from "./pages/PricingComponent.jsx";
 import FaqComponent from "./pages/FaqComponent.jsx";
 import OurTeamComponents from "./pages/OurTeamComponents.jsx";
 import TestimonialsComponents from "./pages/TestimonialsComponents.jsx";
+import { CartProvider } from "react-use-cart";
 const App = () => {
   return (
     <>
       <div>
         <Router>
           <HeaderComponent />
+          <CartProvider>
+            <Routes>
+              <Route path='/' element={<SharedLayout />}>
+                <Route index element={<Home />} />
+                <Route path='/About' element={<About />} />
+                <Route
+                  path='/PricingComponent'
+                  element={<PricingComponent />}
+                />
+                <Route path='/FaqComponent' element={<FaqComponent />} />
+                <Route
+                  path='/OurTeamComponents'
+                  element={<OurTeamComponents />}
+                />
+                <Route
+                  path='/TestimonialsComponents'
+                  element={<TestimonialsComponents />}
+                />
+                <Route path='/Services' element={<Services />} />
+                <Route path='/Projects' element={<Projects />} />
+                <Route path='/Shop' element={<Shop />} />
+                <Route path='/Contact' element={<Contact />} />
+                <Route path='/Cart' element={<Cart />} />
+                <Route path='*' element={<NotFoundPage />} />
+              </Route>
+            </Routes>
+          </CartProvider>
 
-          <Routes>
-            <Route path='/' element={<SharedLayout />}>
-              <Route index element={<Home />} />
-              <Route path='/About' element={<About />} />
-              <Route path='/PricingComponent' element={<PricingComponent />} />
-              <Route path='/FaqComponent' element={<FaqComponent />} />
-              <Route
-                path='/OurTeamComponents'
-                element={<OurTeamComponents />}
-              />
-              <Route
-                path='/TestimonialsComponents'
-                element={<TestimonialsComponents />}
-              />
-              <Route path='/Services' element={<Services />} />
-              <Route path='/Projects' element={<Projects />} />
-              <Route path='/Shop' element={<Shop />} />
-              <Route path='/Contact' element={<Contact />} />
-              <Route path='/Cart' element={<Cart />} />
-              <Route path='*' element={<NotFoundPage />} />
-            </Route>
-          </Routes>
           <section className='bg-white p-8 py-14'>
             <Footer />
           </section>

@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaShoppingCart } from "react-icons/fa";
 import { SmallScreenSize } from "./SmallScreenSize.jsx";
+import { useCart } from "react-use-cart";
 
 const NavBar = () => {
+  const { totalItems } = useCart();
   const [isOpen, setIsOpen] = useState(false);
   const [isHover, setIsHover] = useState(false);
   console.log(isHover);
@@ -90,7 +92,7 @@ const NavBar = () => {
                 <FaShoppingCart className=' text-orange-600' />
               </Link>
               <h2 className='number flex items-center justify-center absolute text-center p-cuspd2 top-cusTop2 right-cusRight w-cusWidth2 h-cusHeight2 font-bold border-cusBwidth border-cusBcolor border-solid bg-cusBgCol rounded-cusBradius'>
-                15
+                {totalItems}
               </h2>
             </div>
             <div className='flex cusLg:hidden'>

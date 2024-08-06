@@ -31,6 +31,11 @@ import {
   item20,
   item21,
   item22,
+  item23,
+  item24,
+  item25,
+  item28,
+  item27,
 } from "./images/imports.js";
 
 export const items = [
@@ -386,5 +391,44 @@ export const residential = [
     title: " Enhancing Financial Performance For Insurance Company",
     img: item20,
     desc: "  We utilized data analytics to identify trends and patterns in modern technology",
+  },
+];
+
+export const shopItem = [
+  {
+    id: 1,
+    name: "chandalier",
+    price: "200",
+    img: item23,
+  },
+  {
+    id: 2,
+    name: "bulbs",
+    price: "500",
+    img: item27,
+  },
+  {
+    id: 3,
+    name: "sockets",
+    price: "800",
+    img: item28,
+  },
+  {
+    id: 4,
+    name: "switches",
+    price: "1000",
+    img: item23,
+  },
+  {
+    id: 5,
+    name: "solars",
+    price: "890",
+    img: item23,
+  },
+  {
+    id: 6,
+    name: "cables",
+    price: "560",
+    img: item23,
   },
 ];

@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -95,6 +97,9 @@ export default {
         cusWidth11: "50vw",
         cusWidth12: "370px",
         cusWidth13: "42px",
+        cusWidth14: "30px",
+        cusWidth15: "300px",
+        cusWidth16: "100px",
       },
 
       maxWidth: {
@@ -112,6 +117,7 @@ export default {
         cusheight7: "42px",
         cusheight8: "2px",
         cusheight9: "500px",
+        cusheight10: "30px",
       },
 
       zIndex: {
@@ -129,6 +135,7 @@ export default {
         cuslg3: "1221px",
         cuslg4: "1198px",
         cuslg5: "1000px",
+        sm1: "580px",
       },
 
       transitionProperty: {
