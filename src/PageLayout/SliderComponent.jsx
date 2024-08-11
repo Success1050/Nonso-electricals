@@ -20,7 +20,7 @@ const SliderComponent = () => {
           const { id, name, description, position } = review;
           return (
             <div key={id} className='w-full '>
-              <p className='font-semibold text-center cussm:text-left cusLg:text-center leading-8'>
+              <p className='font-semibold text-center cussm:text-left cusLg:text-center leading-8 text-cusFontSize8'>
                 {description}
               </p>
 

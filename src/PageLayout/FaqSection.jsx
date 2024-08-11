@@ -21,7 +21,7 @@ const FaqSection = () => {
         const { id, question, answer } = state;
         return (
           <div
-            className='flex flex-col gap-3 cussm:w-cuswidth9 cusLg:w-auto'
+            className='flex flex-col gap-3 md:w-cuswidth9 cusLg:w-auto cussm:w-full'
             key={id}
           >
             <div className='question1 flex items-center justify-between w-full p-cusp1 shadow-customShadow bg-white rounded-cusBradius2'>

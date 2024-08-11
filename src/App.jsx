@@ -49,7 +49,7 @@ const App = () => {
             </Routes>
           </CartProvider>
 
-          <section className='bg-white p-8 py-14'>
+          <section className='bg-cusBgCol7 p-8 py-14'>
             <Footer />
           </section>
         </Router>

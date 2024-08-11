@@ -1,7 +1,6 @@
 import React from "react";
 import { item23 } from "../images/imports";
-import { Link } from "react-router-dom";
-import { shopItem } from "../elecItems";
+
 import DisplayShop from "./DisplayShop";
 
 const ShopComponent = () => {

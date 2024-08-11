@@ -6,7 +6,7 @@ const Footer = () => {
   const [email, setEmail] = useState("");
   return (
     <>
-      <div className='flex justify-center items-start gap-x-5 cussm: flex-col cusLg:flex-row cussm:items-center cusLg:items-start'>
+      <div className='flex justify-center items-start gap-x-5 cussm: flex-col cusLg:flex-row cussm:items-center cusLg:items-start my-[4rem]'>
         <div className='basis-cusBasis'>
           <h2 className='text-cusFontSize10 text-cuscolor font-bold mb-3 cussm:text-cusFontSize12 cussmall:text-cusFontSize10 cussm:text-center text-center sm:text-left'>
             Sign Up To Newsletter
@@ -28,7 +28,7 @@ const Footer = () => {
             <input
               type='submit'
               value='subscribe'
-              className='border-solid border-cusBwidth border-cusBtnColor bg-cusBgCol text-cusBgCol6 text-center capitalize h-auto rounded-[8px] py-4 px-7 text-cusFontSize8 inline-block w-full cussm:w-1/2 cusLg:w-full cussm:mx-auto cusLg:mx-0 cursor-pointer transition duration-500 hover:bg-white'
+              className='border-solid border-cusBwidth my-[2rem] md:my-0 border-cusBtnColor bg-cusBgCol text-cusBgCol6 text-center capitalize h-auto rounded-[8px] py-4 px-7 text-cusFontSize8 inline-block w-full cussm:w-1/2 cusLg:w-full cussm:mx-auto cusLg:mx-0 cursor-pointer transition duration-500 hover:bg-white'
             />
           </form>
         </div>

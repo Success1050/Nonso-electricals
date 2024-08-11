@@ -83,7 +83,9 @@ const NavBar = () => {
             </Link>
 
             <div className=' border-2 p-4 w-40 rounded-lg text-center btn2 cussm:bg-cusBgCol cusLg:bg-none cussm:border-cusBwidth cussm:border-solid cussm:border-cusBtnColor cusLg:border-none cussm:transition-all duration-cusDuration'>
-              <Link to='/contact'>Contact</Link>
+              <Link className='block w-full' to='/contact'>
+                Contact
+              </Link>
             </div>
           </div>
           <div className='flex items-center cussm:gap-6 xl:gap-0 justify-center cusLg:ml-6 xl:ml-0'>

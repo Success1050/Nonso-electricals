@@ -16,6 +16,8 @@ export default {
         cusBgCol3: "rgba(32, 26, 26, 0.7)",
         cusBgCol4: "#101828",
         cusBgCol5: "rgba(255, 255, 255, .3)",
+        cusBgCol6: "rgba(175, 175, 175, .5);",
+        cusBgCol7: "#f8f8fb;",
       },
 
       colors: {
@@ -37,12 +39,14 @@ export default {
         cusBradius: "50%",
         cusBradius2: "6px",
         cusBradius3: "50px",
+        cusBradius4: "8px",
       },
 
       borderColor: {
         cusBcolor: "rgba(234, 88, 12, 0.7)",
         cusBcolor2: "rgba(71, 84, 103, .4)",
         cusBcolor3: "rgba(71, 84, 103, .3)",
+        cusBcolor4: "rgba(71, 84, 103, .3)",
       },
 
       spacing: {

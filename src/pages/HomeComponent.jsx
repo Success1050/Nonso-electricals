@@ -24,28 +24,14 @@ import QuestionSection from "./QuestionSection";
 import RatingSection from "../PageLayout/RatingSection";
 import Testimonials from "./Testimonials";
 import PricingSection from "./PricingSection";
+import {
+  leftVariants,
+  rightVariants,
+  topVariants,
+  bottomVariants,
+} from "../PageLayout/motion";
 
 const HomeComponent = () => {
-  const leftVariants = {
-    hidden: { opacity: 0, x: -100 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
-  };
-
-  const rightVariants = {
-    hidden: { opacity: 0, x: 100 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
-  };
-
-  const topVariants = {
-    hidden: { opacity: 0, y: -100 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  };
-
-  const bottomVariants = {
-    hidden: { opacity: 0, y: 75 },
-    visible: { opacity: 1, y: 0 },
-  };
-
   return (
     <>
       <header className="bg-[url('./src/images/banner.png')] overflow-hidden">
@@ -90,14 +76,17 @@ const HomeComponent = () => {
       <section className='bg-white p-14 services overflow-hidden'>
         <Reveal variants={bottomVariants}>
           <div className='mx-10 flex justify-between items-center pt-14 gap-3 cussm:flex-col cussmall:flex-row cussm:gap-2 sm:gap-3'>
-            <h2 className='text-3xl font-bold mb-3'>Services</h2>
-            <button className='border-2 rounded-lg text-center bg-orange-600 cursor-pointer btn2 sm:mt-4 w-32 h-16 z-20 cussm:w-full sm:w-32 text-cusFontSize1 cussm:mt-0 cussm:mb-3 sm:mb-2'>
-              <Link to='/about' className='banner-text-link1'>
+            <h2 className='text-3xl font-bold mb-3 basis-1/2'>Services</h2>
+            <button className='border-2 rounded-lg text-center bg-orange-600 cursor-pointer btn2 cussmall:w-fit p-6 cussm:w-full cussmall: z-20   text-cusFontSize1 block '>
+              <Link
+                to='/about'
+                className='banner-text-link1 block w-full h-full'
+              >
                 View All
               </Link>
             </button>
           </div>
-          <div className='parent cussm:grid-cols-[100%] grid cusLg:grid-cols-3 p-6 gap-6 justify-center items-center'>
+          <div className='parent cussm:grid-cols-[100%] grid cusLg:grid-cols-3 p-6 gap-6 cussm:gap-10 sm:gap-6 justify-center items-center mt-[5rem]'>
             {services.map((service) => {
               const { id, title, desc } = service;
               return (
@@ -123,8 +112,8 @@ const HomeComponent = () => {
         </Reveal>
       </section>
 
-      <section className='bg-gray-100 p-8 overflow-hidden'>
-        <div className='item1 cussm:flex-col cusLg:flex-row flex justify-around items-center cussm:gap-cusgap2 cusLg:gap-0'>
+      <section className='bg-gray-100 p-8 overflow-hidden '>
+        <div className='item1 cussm:flex-col cusLg:flex-row flex justify-around items-center cussm:gap-cusgap2 cusLg:gap-0 mt-[5rem]'>
           <Reveal className='cussm:w-full cusLg:w-1/2' variants={leftVariants}>
             <div className='item1-child '>
               <h2 className='item1-child-header cussm:text-cusfontsize5 cussmall:text-3xl font-bold mb-5'>
@@ -137,7 +126,7 @@ const HomeComponent = () => {
                 solutions, and advanced Expertise, we ensure a faultless
                 electrical intallation and measures to keep you and your loved
                 ones safe from electrocution
-                <button className='border-2 rounded-lg text-center bg-orange-600 cursor-pointer btn2 mt-4 w-36 h-16 block cussm:self-start z-20'>
+                <button className='border-2 rounded-lg text-center bg-orange-600 cursor-pointer btn2 mt-5 w-36 h-16 block cussm:self-start z-20 mb-[3rem]'>
                   <Link to='/about' className='banner-text-link1'>
                     More About Us
                   </Link>
@@ -150,7 +139,7 @@ const HomeComponent = () => {
             className='cussm:w-full cusLg:w-1/2 cussm:ml-0 cusLg:ml-7'
             variants={rightVariants}
           >
-            <div className='item1-child'>
+            <div className='item1-child mt-[3rem]'>
               <img src={engineer} alt='image 1' className='w-full' />
             </div>
           </Reveal>
@@ -160,8 +149,8 @@ const HomeComponent = () => {
       <section className='bg-white p-8 overflow-hidden'>
         <div className='item1 cussm:flex-col cusLg:flex-row flex justify-around items-center cussm:gap-cusgap2 cusLg:gap-0'>
           <Reveal className='cussm:w-full cusLg:w-1/2' variants={leftVariants}>
-            <div className='item1-child item2 cussm:order-2 cusLg:order-1'>
-              <img src={transformers} alt='image 2' className='w-full' />
+            <div className='item1-child item2 cussm:order-2 cusLg:order-1 mt-[3rem]'>
+              <img src={transformers} alt='image 2' className='w-full ' />
             </div>
           </Reveal>
 
@@ -169,7 +158,7 @@ const HomeComponent = () => {
             className='cussm:w-full cusLg:w-1/2 cussm:ml-0 cusLg:ml-7'
             variants={rightVariants}
           >
-            <div className='item1-child item2-text cussm:order-1 cusLg:order-2'>
+            <div className='item1-child item2-text cussm:order-1 cusLg:order-2 mt-[3rem]'>
               <h2 className='item1-child-header text-3xl font-bold mb-5'>
                 Explore Our Various Electrical Services that Will Keep Your
                 Homes and Workplaces lighted Effortlessly
@@ -193,9 +182,9 @@ const HomeComponent = () => {
 
       <section className='bg-gray-100 p-8 overflow-hidden'>
         <Reveal variants={topVariants}>
-          <div className='flex cussm:flex-col cusLg:flex-row cussm:text-center cusLg:text-left cussm:gap-cusgap2 cusLg:gap-0 advert1 items-center justify-between basis-2/5 px-8'>
-            <div className='flex flex-col'>
-              <h2 className='text-3xl font-bold mb-3'>
+          <div className='flex cussm:flex-col cusLg:flex-row cussm:text-center cusLg:text-left cussm:gap-cusgap2 cusLg:gap-0 advert1 items-center justify-between basis-2/5 px-8 mt-[4rem]'>
+            <div className='flex flex-col my-[2rem]'>
+              <h2 className='text-3xl font-bold my-[3rem]'>
                 Lets Lighten Up Your Homes
               </h2>
               <p>
@@ -217,9 +206,9 @@ const HomeComponent = () => {
         </Reveal>
       </section>
 
-      <section className='bg-white p-8 cussm:p-0 sm:p-8 overflow-hidden'>
+      <section className='bg-white p-8 cussm:p-0 sm:p-4 overflow-hidden'>
         <Reveal variants={bottomVariants}>
-          <div className='shop flex cussm:flex-col cusLg:flex-row cussm:text-center cusLg:text-left cussm:gap-cusgap2 cusLg:gap-0 advert1 items-center justify-between basis-2/5 px-8'>
+          <div className='shop flex cussm:flex-col cusLg:flex-row cussm:text-center cusLg:text-left cussm:gap-cusgap2 cusLg:gap-0 advert1 items-center justify-between basis-2/5 px-8 mt-[5rem]'>
             <h2 className='text-3xl font-bold mb-3 cussm:text-cusFontSize cussmall:text-3xl cussm:text-center text-center sm:text-left'>
               Discover Our Electrical Materials
             </h2>
@@ -230,14 +219,14 @@ const HomeComponent = () => {
               </Link>
             </button>
           </div>
-          <div className='overbar cussm:flex-col cusLg:flex-row  m-cusm w-cusWidth4 flex justify-between items-center gap-cusgap'>
-            <div className='overturn relative basis-1/3'>
+          <div className='overbar cussm:flex-col cusLg:flex-row  m-cusm w-cusWidth4 grid cussm:grid-cols-1 grid-cols-3 justify-between items-center gap-cusgap sm:grid-cols-2 lg:grid-cols-3'>
+            <div className='overturn relative cussm:w-full '>
               <img
                 src={solarpanel}
                 alt='solarpanel'
-                className='w-full  img5 cussm:w-cusWidth5 cusLg:w-auto cussm:m-auto cusLg:m-0 block'
+                className='w-full cussm:m-auto cusLg:m-0 block'
               />
-              <div className='overturn2 w-full h-cusHeight3 max-h-fit top-0 left-0 bg-cusBgCol3 transition-custom duration-cusDuration absolute '></div>
+              <div className='overturn2 cussm:w-full h-cusHeight3 max-h-fit top-0 left-0 bg-cusBgCol3 transition-custom duration-cusDuration  absolute '></div>
               <div className='absolute desc cussm:w-cusWidth6 left-1/2 top-1/2 opacity-0 cussm:text-cusFontSize4 cusLg:text-2xl text-white font-bold translate-y-custranslateY translate-x-custranslateX cusLg:w-full duration-cusDuration'>
                 <h2 className='text-white text-center'>MLCB Circuit Breaker</h2>
                 <div className=' cusLg:mx-4 flex justify-center items-center cussm:gap-10 cusLg:gap-15'>
@@ -249,13 +238,13 @@ const HomeComponent = () => {
               </div>
             </div>
 
-            <div className='overturn relative basis-1/3'>
+            <div className='overturn relative '>
               <img
                 src={chandalier2}
                 alt=''
-                className='w-full  img5 cussm:w-cusWidth5 cusLg:w-auto cussm:m-auto cusLg:m-0 block'
+                className='w-full cussm:m-auto cusLg:m-0 blockcusLg:w-auto block'
               />
-              <div className='overturn2 w-full h-cusHeight3 max-h-fit top-0 left-0 bg-cusBgCol3 transition-custom duration-cusDuration absolute'></div>
+              <div className='overturn2 cussm:w-full h-cusHeight3 max-h-fit top-0 left-0 bg-cusBgCol3 transition-custom duration-cusDuration absolute'></div>
               <div className='absolute desc cussm:w-cusWidth6 left-1/2 top-1/2 opacity-0 cussm:text-cusFontSize4 cusLg:text-2xl text-white font-bold translate-y-custranslateY translate-x-custranslateX cusLg:w-full duration-cusDuration'>
                 <h2 className='text-white text-center'>MLCB Circuit Breaker</h2>
                 <div className=' cusLg:mx-4 flex justify-center items-center cussm:gap-10 cusLg:gap-15'>
@@ -267,13 +256,13 @@ const HomeComponent = () => {
               </div>
             </div>
 
-            <div className='overturn relative basis-1/3'>
+            <div className='overturn relative sm:translate-x-[50%] lg:translate-x-0'>
               <img
                 src={chandalier}
                 alt='chandalier'
-                className='w-full img5 cussm:w-cusWidth5 cusLg:w-auto cussm:m-auto cusLg:m-0 block img8'
+                className='w-full cussm:m-auto cusLg:m-0 block cusLg:w-auto img8'
               />
-              <div className='overturn2 w-full h-cusHeight3 max-h-fit top-0 left-0 bg-cusBgCol3 transition-custom duration-cusDuration absolute'></div>
+              <div className='overturn2 cussm:w-full h-cusHeight3 max-h-fit top-0 left-0 bg-cusBgCol3 transition-custom duration-cusDuration absolute'></div>
               <div className='absolute desc cussm:w-cusWidth6 left-1/2 top-1/2 opacity-0 cussm:text-cusFontSize4 cusLg:text-2xl text-white font-bold translate-y-custranslateY translate-x-custranslateX cusLg:w-full duration-cusDuration'>
                 <h2 className='text-white text-center'>MLCB Circuit Breaker</h2>
                 <div className=' cusLg:mx-4 flex justify-center items-center cussm:gap-10 cusLg:gap-15'>
@@ -288,18 +277,18 @@ const HomeComponent = () => {
         </Reveal>
       </section>
 
-      <section className='bg-gray-100 p-8 cussm:p-0 md:p-8 overflow-hidden'>
+      <section className='bg-gray-100 p-8 cussm:p-0 md:p-8 overflow-hidden '>
         <Reveal variants={bottomVariants}>
-          <div className='flex cussm:items-center cussm:justify-center cusLg:item-start cusLg:justify-normal'>
+          <div className='flex cussm:items-center cussm:justify-center cusLg:item-start cusLg:justify-normal my-[2rem]'>
             <img src={icon} alt='w-full cussm:m-auto' />
           </div>
 
           <QuestionSection>
             <div className='basis-cusBasis flex flex-col gap-3'>
-              <h2 className='w-full text-cusFontSiz7 cussm:text-cusFontSize10 cusLg:text-cusFontSiz7 font-cusFontFamily2 cussm:text-center cusLg:text-left font-bold uppercase leading-cuslineheight'>
+              <h2 className='w-full text-cusFontSiz7 cussm:text-cusFontSize10 cusLg:text-cusFontSiz7 font-cusFontFamily2 cussm:text-center cusLg:text-left font-bold uppercase leading-cuslineheight cussm:mb-[3rem] md:mb-0'>
                 Feel Confident Knowing That We Properly lighten Up Your Homes
               </h2>
-              <p className='w-full font-cusFontFamily2 font-normal cussm:text-center cusLg:text-left'>
+              <p className='w-full font-cusFontFamily2 font-normal cussm:text-center cussm:text-[18px] cusLg:text-left mb-[3rem] md:mb-0'>
                 With our state-of-the-art technologies and expertly trained
                 professionals, we go the extra mile to electrify your homes with
                 modern electrical materials and solar Installation.
@@ -307,12 +296,12 @@ const HomeComponent = () => {
               <img
                 src={electric2}
                 alt='electricity'
-                className='max-w-full cussm:max-w-cusmaxwidth cussm:m-auto cusLg:max-w-full cusLg:m-0'
+                className='max-w-full cussm:w-full cussm:m-auto cusLg:max-w-full cusLg:m-0'
               />
             </div>
 
             {/* FAQ */}
-            <div className='basis-cusBasis'>
+            <div className='md:basis-cusBasis cussm:w-full p-4 mb-[2rem] md:mb-0'>
               <FaqSection />
 
               <button className='border-2 rounded-lg text-center bg-orange-600 cursor-pointer btn2 w-fit px-3 h-16 z-20 text-cusFontSize1 block cussm:m-auto cusLg:m-0'>
@@ -345,12 +334,12 @@ const HomeComponent = () => {
             className='cussm:w-full cusLg:w-1/2 cusLg:ml-7 cussm:ml-0'
             variants={rightVariants}
           >
-            <div className='basis-cusBasis2 cussm:mt-7 cusLg:mt-0'>
-              <div className='mb-4'>
+            <div className='basis-cusBasis2 cussm:my-[5rem] cusLg:mt-0'>
+              <div className='mb-4 lg:mb-0'>
                 <h2 className='text-cusFontSiz7 cussm:text-center cusLg:text-left'>
                   Our Statistics
                 </h2>
-                <p className='cussm:text-center cusLg:text-left'>
+                <p className='cussm:text-center cusLg:text-left my-[5rem] md:my-2'>
                   At our company, we are proud to share our statistics that
                   demonstrate our commitment to delivering exceptional security
                   services.

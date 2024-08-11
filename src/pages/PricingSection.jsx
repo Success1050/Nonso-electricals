@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 const PricingSection = () => {
   return (
     <>
-      <div className='flex justify-between items-start cussm:flex-col cusLg:flex-row cussm:gap-y-4 cusLg:gap-0 cussm:items-center cusLg:items-start'>
+      <div className='flex justify-between items-start cussm:flex-col cusLg:flex-row cussm:gap-y-4 cusLg:gap-0 cussm:items-center cusLg:items-start my-[3rem]'>
         <div className='basis-cusBasis3'>
           <div className='max-w-full cussm:text-center cusLg:text-left'>
-            <h2 className='text-cusFontSize10 '>Pricing</h2>
+            <h2 className='text-cusFontSize10 my-[1.5rem]'>Pricing</h2>
             <p className='text-cuscolor text-cusFontSize8'>
               We provide electrical requirements of residential, commercial and
               other clients
@@ -20,7 +20,7 @@ const PricingSection = () => {
           </div>
         </div>
 
-        <div className=' flex justify-between items-start gap-4 cussm:flex-col cusLg:flex-row '>
+        <div className=' flex justify-between items-start gap-8 cussm:flex-col md:flex-row my-[3rem]'>
           <div className='bg-cusBgCol4 p-cuspd4 text-white rounded-cusBradius2 relative'>
             <h2>Most popular plan</h2>
             <div className='w-fit bg-slate-400 p-cuspd5 rounded-cusBradius2 absolute top-4 right-2'>

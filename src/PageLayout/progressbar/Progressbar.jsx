@@ -4,7 +4,7 @@ import "./progressbar.css";
 const Progressbar = () => {
   return (
     <>
-      <div className='cussm:mt-5 cusLg:mt-0 experience-item max-w-cusmaxwidth2 mb-cusmb2 cussm:max-w-full cusLg:max-w-cusmaxwidth2'>
+      <div className='cussm:my-[3rem] cusLg:mt-0 cuslg5:my-2 experience-item max-w-cusmaxwidth2 mb-cusmb2 cussm:max-w-full cusLg:max-w-cusmaxwidth2'>
         <div className='experience-info flex items-center justify-between'>
           <p>incident resolution rate</p>
           <p className='progresstext text-cusFontSize4 font-semibold leading-cuslineheight2'>
@@ -19,7 +19,7 @@ const Progressbar = () => {
         </div>
       </div>
 
-      <div className='experience-item max-w-cusmaxwidth2 mb-cusmb2 cussm:max-w-full cusLg:max-w-cusmaxwidth2'>
+      <div className='experience-item max-w-cusmaxwidth2 my-[3rem] cuslg5:my-2 mb-cusmb2 cussm:max-w-full cusLg:max-w-cusmaxwidth2'>
         <div className='experience-info flex items-center justify-between'>
           <p>Response Time</p>
           <p className='progresstext text-cusFontSize4 font-semibold leading-cuslineheight2'>
@@ -34,7 +34,7 @@ const Progressbar = () => {
         </div>
       </div>
 
-      <div className='experience-item max-w-cusmaxwidth2 mb-cusmb2 cussm:max-w-full cusLg:max-w-cusmaxwidth2'>
+      <div className='experience-item max-w-cusmaxwidth2 my-[3rem] cuslg5:my-4 mb-cusmb2 cussm:max-w-full cusLg:max-w-cusmaxwidth2'>
         <div className='experience-info flex items-center justify-between '>
           <p>System Reliability</p>
           <p className='progresstext text-cusFontSize4 font-semibold leading-cuslineheight2'>
