@@ -1,8 +1,8 @@
 import Home from "./pages/HomeComponent.jsx";
 import About from "./pages/AboutComponent.jsx";
-import Services from "./pages/ServicesComponent.jsx";
-import Projects from "./pages/ProjectsComponent.jsx";
-import Shop from "./pages/ShopComponent.jsx";
+import Services from "./pages/Services/ServicesComponent.jsx";
+import Projects from "./pages/projects/ProjectsComponent.jsx";
+import Shop from "./pages/shop/ShopComponent.jsx";
 import Contact from "./pages/ContactComponent.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 import Cart from "./pages/Cart.jsx";
@@ -10,16 +10,18 @@ import Footer from "./PageLayout/Footer.jsx";
 import HeaderComponent from "./PageLayout/HeaderComponent.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SharedLayout from "./PageLayout/SharedLayout.jsx";
-import PricingComponent from "./pages/PricingComponent.jsx";
-import FaqComponent from "./pages/FaqComponent.jsx";
+import PricingComponent from "./pages/Pricing/PricingComponent.jsx";
+import FaqComponent from "./pages/FAQ/FaqComponent.jsx";
 import OurTeamComponents from "./pages/OurTeamComponents.jsx";
-import TestimonialsComponents from "./pages/TestimonialsComponents.jsx";
+import TestimonialsComponents from "./pages/Tesimonials/TestimonialsComponents.jsx";
 import { CartProvider } from "react-use-cart";
+import UseScrollToTop from "./PageLayout/UseScrollToTop.jsx";
 const App = () => {
   return (
     <>
       <div>
         <Router>
+          <UseScrollToTop />
           <HeaderComponent />
           <CartProvider>
             <Routes>

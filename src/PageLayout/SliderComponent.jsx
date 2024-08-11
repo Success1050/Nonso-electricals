@@ -12,7 +12,7 @@ const settings = {
   slidesToScroll: 1,
 };
 
-const SliderComponent = () => {
+export const SliderComponent = () => {
   return (
     <>
       <Slider {...settings}>
@@ -46,4 +46,4 @@ const SliderComponent = () => {
   );
 };
 
-export default SliderComponent;
+// export default SliderComponent;

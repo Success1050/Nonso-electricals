@@ -1,10 +1,10 @@
 import React from "react";
-import { moreServices } from "../elecItems";
+import { moreServices } from "../../elecItems";
 import { Link } from "react-router-dom";
 
 const ServicesList = () => {
   return (
-    <div className='parent cussm:grid-cols-[100%] grid sm:grid-cols-2 lg:grid-cols-3 p-6 gap-6 justify-center items-center'>
+    <div className='parent grid cussm:grid-cols-[100%]  sm:grid-cols-2 lg:grid-cols-3 p-6 gap-6 justify-center items-center'>
       {moreServices.map((service) => {
         const { id, title, desc } = service;
         return (

@@ -42,7 +42,7 @@ const NavBar = () => {
             </Link>
 
             <div
-              className='relative addheight px-6 py-6'
+              className='relative addheight px-6 py-6 cursor-pointer'
               onMouseEnter={() => {
                 return setIsHover(true);
               }}
@@ -50,22 +50,23 @@ const NavBar = () => {
                 return setIsHover(false);
               }}
             >
-              <Link to='/about' className='btn'>
-                About
-              </Link>
+              <h2>Who We Are</h2>
 
               {isHover && (
-                <div className=' absolute aboutnavs p-4 rounded-cusBradius2 top-16 right-1/2 translate-x-1/2 shadow-lg'>
-                  <Link to='/PricingComponent' className='btn'>
+                <div className=' absolute aboutnavs p-4 rounded-cusBradius2 top-16 right-1/2 translate-x-1/2 shadow-lg transition-all duration-1000 ease-in'>
+                  <Link to='/about' className='btn block mb-3'>
+                    About
+                  </Link>
+                  <Link to='/PricingComponent' className='btn block mb-3'>
                     <li>Pricing</li>
                   </Link>
-                  <Link to='/OurTeamComponents' className='btn'>
+                  <Link to='/OurTeamComponents' className='btn block mb-3'>
                     <li>Our Team</li>
                   </Link>
-                  <Link to='FaqComponent' className='btn'>
+                  <Link to='FaqComponent' className='btn block mb-3'>
                     <li>Faq</li>
                   </Link>
-                  <Link to='TestimonialsComponents' className='btn'>
+                  <Link to='TestimonialsComponents' className='btn block mb-3'>
                     <li>Testimonianls</li>
                   </Link>
                 </div>

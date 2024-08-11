@@ -19,11 +19,11 @@ import {
 import Progressbar from "../PageLayout/progressbar/Progressbar";
 import Companies from "./Companies";
 import AdvertPageComponent from "./AdvertPageComponent";
-import FaqSection from "../PageLayout/FaqSection";
+import FaqSection from "./FAQ/FaqSection";
 import QuestionSection from "./QuestionSection";
 import RatingSection from "../PageLayout/RatingSection";
-import Testimonials from "./Testimonials";
-import PricingSection from "./PricingSection";
+import Testimonials from "./Tesimonials/Testimonials";
+import PricingSection from "./Pricing/PricingSection";
 import {
   leftVariants,
   rightVariants,

@@ -1,6 +1,6 @@
 import React from "react";
-import SliderComponent from "../PageLayout/SliderComponent";
-
+// import SliderComponent from "../PageLayout/SliderComponent";
+import { SliderComponent } from "../../PageLayout/SliderComponent";
 const Testimonials = () => {
   return (
     <>

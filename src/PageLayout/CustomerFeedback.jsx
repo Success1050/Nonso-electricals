@@ -5,7 +5,7 @@ import { man1, man2, man4 } from "../images/imports";
 
 const CustomerFeedback = () => {
   return (
-    <div className='grid grid-cols-3 justify-center items-center cussm:grid-cols-1 sm:grid-cols-2 cusLg:grid-cols-3 gap-3'>
+    <div className='grid grid-cols-3 justify-center items-center cussm:grid-cols-1 sm:grid-cols-2 cusLg:grid-cols-3 gap-8'>
       {fullTestimonials.map((test) => {
         const { id, name, desc, position, img } = test;
         return (
@@ -29,7 +29,7 @@ const CustomerFeedback = () => {
                 <img
                   src={img}
                   alt='a man'
-                  className='w-cusWidth14 h-cusWidth14 rounded-s-cusBradius2'
+                  className='w-full h-cusWidth14 rounded-s-cusBradius2'
                 />
               </div>
               <div className='basis-cusBasis'>

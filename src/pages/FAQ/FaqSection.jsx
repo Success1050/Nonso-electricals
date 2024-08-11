@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-import { questions } from "../elecItems";
+import { questions } from "../../elecItems";
 import { useState } from "react";
 import { FaArrowUp, FaArrowDown } from "react-icons/fa";
 

@@ -17,21 +17,24 @@ export const SmallScreenSize = ({
   return (
     <div className='relative'>
       <div
-        className={`fixed top-cusTop bg-white left-cusLeft w-cusWidth h-screen text-black z-zCus pt-cusPt flex flex-col items-start pl-cuspl text-cusFontSize gap-cusgap transition-custom duration-cusDuration cusLg:hidden ${
+        className={`fixed top-cusTop bg-white left-cusLeft min-w-1/2 h-screen text-black z-zCus pt-cusPt flex flex-col items-start pl-cuspl text-cusFontSize  gap-cusgap transition-custom duration-cusDuration cusLg:hidden ${
           isOpen ? "active" : "left-cusLeft"
         }`}
       >
         <div className='w-full'>
-          <Link to='/' className='btn' onClick={toggleMenu}>
+          <Link
+            to='/'
+            className='btn cussm:text-cusFontSize4'
+            onClick={toggleMenu}
+          >
             Home
           </Link>
         </div>
 
         <div className='flex gap-x-28 items-center  w-full success'>
-          <Link to='/about' className='btn' onClick={toggleMenu}>
-            About
-          </Link>
-          <div className='pl-7'>
+          <h2 className='w-full cussm:text-cusFontSize4'>Who We Are</h2>
+
+          <div className='pr-6'>
             <button
               type='button'
               className='text-cusFontSize3'
@@ -47,52 +50,71 @@ export const SmallScreenSize = ({
         </div>
 
         {isDisplay && (
-          <div className='pl-4 h-fit success'>
+          <div className='pl-4 h-fit success transition-all duration-cusDuration ease-in'>
             <Link
-              to='/PricingComponent'
-              className='btn block pt-3'
+              to='/about'
+              className='btn block cussm:text-cusFontSize4'
               onClick={handleClick}
             >
-              <li>Pricing</li>
+              About
+            </Link>
+            <Link
+              to='/PricingComponent'
+              className='btn block pt-3 cussm:text-cusFontSize4'
+              onClick={handleClick}
+            >
+              Pricing
             </Link>
             <Link
               to='/OurTeamComponents'
-              className='btn block pt-3'
+              className='btn block pt-3 cussm:text-cusFontSize4'
               onClick={handleClick}
             >
-              <li>Our Team</li>
+              Our Team
             </Link>
             <Link
               to='FaqComponent'
-              className='btn block pt-3'
+              className='btn block pt-3 cussm:text-cusFontSize4'
               onClick={handleClick}
             >
-              <li>Faq</li>
+              Faq
             </Link>
             <Link
               to='TestimonialsComponents'
-              className='btn block pt-3'
+              className='btn block pt-3 cussm:text-cusFontSize4'
               onClick={handleClick}
             >
-              <li>Testimonianls</li>
+              Testimonianls
             </Link>
           </div>
         )}
 
         <div className='w-full'>
-          <Link to='/services' className='btn' onClick={toggleMenu}>
+          <Link
+            to='/services'
+            className='btn cussm:text-cusFontSize4'
+            onClick={toggleMenu}
+          >
             Services
           </Link>
         </div>
 
         <div className='w-full'>
-          <Link to='/projects' className='btn' onClick={toggleMenu}>
+          <Link
+            to='/projects'
+            className='btn cussm:text-cusFontSize4'
+            onClick={toggleMenu}
+          >
             Projects
           </Link>
         </div>
 
         <div className='w-full'>
-          <Link to='/shop' className='btn' onClick={toggleMenu}>
+          <Link
+            to='/shop'
+            className='btn cussm:text-cusFontSize4'
+            onClick={toggleMenu}
+          >
             Shop
           </Link>
         </div>

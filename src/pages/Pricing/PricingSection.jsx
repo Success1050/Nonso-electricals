@@ -1,24 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { topVariants, bottomVariants } from "../../PageLayout/motion";
+import Reveal from "../../Reveal";
 const PricingSection = () => {
   return (
     <>
       <div className='flex justify-between items-start cussm:flex-col cusLg:flex-row cussm:gap-y-4 cusLg:gap-0 cussm:items-center cusLg:items-start my-[3rem]'>
-        <div className='basis-cusBasis3'>
-          <div className='max-w-full cussm:text-center cusLg:text-left'>
-            <h2 className='text-cusFontSize10 my-[1.5rem]'>Pricing</h2>
-            <p className='text-cuscolor text-cusFontSize8'>
-              We provide electrical requirements of residential, commercial and
-              other clients
-            </p>
-            <button className='banner-text-link2 border-2 rounded-lg bg-orange-600 cursor-pointer btn2 mt-6 w-36 h-16 '>
-              <Link to='/about' className='banner-text-link1'>
-                Get Now
-              </Link>
-            </button>
+        <Reveal variants={bottomVariants}>
+          <div className='basis-cusBasis3'>
+            <div className='max-w-full cussm:text-center cusLg:text-left'>
+              <h2 className='text-cusFontSize10 my-[1.5rem]'>Pricing</h2>
+              <p className='text-cuscolor text-cusFontSize8'>
+                We provide electrical requirements of residential, commercial
+                and other clients
+              </p>
+              <button className='banner-text-link2 border-2 rounded-lg bg-orange-600 cursor-pointer btn2 mt-6 w-36 h-16 '>
+                <Link to='/about' className='banner-text-link1'>
+                  Get Now
+                </Link>
+              </button>
+            </div>
           </div>
-        </div>
+        </Reveal>
 
         <div className=' flex justify-between items-start gap-8 cussm:flex-col md:flex-row my-[3rem]'>
           <div className='bg-cusBgCol4 p-cuspd4 text-white rounded-cusBradius2 relative'>
